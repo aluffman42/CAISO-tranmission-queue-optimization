@@ -87,13 +87,26 @@ m = Model(Gurobi.Optimizer)
 @variable(m, StoreIn[1:steps]   >= 0)   
 @variable(m, StoreOut[1:steps]  >= 0)  
 @variable(m, InStorage[1:steps] >= 0)
+@variable(m, station_additions[1:Nbuses] >= 0)
+
+# Avalibile capacity at bus constraint
+# For each bus, station_additions equals the sum of capacities of all projects built at that bus
+for (bus_idx_val, bus_id) in enumerate(bus_idx)
+    @constraint(m,
+        station_additions[bus_idx_val] ==
+            sum(solar_build[i] * solar_capacity[i] for i in 1:Nsolar if solar_buses[i] == bus_id) +
+            sum(wind_build[i]  * wind_capacity[i]  for i in 1:Nwind  if wind_buses[i]  == bus_id) +
+            sum(gas_build[i]   * gas_capacity[i]   for i in 1:Ngas   if gas_buses[i]   == bus_id) +
+            sum(batt_build[i]  * batt_capacity[i]  for i in 1:Nbatt  if batt_buses[i]  == bus_id)
+    )
+end
 
 # Available output (as before)
 @expression(m, solar_available[t=1:steps], sum(solar_build[i] * solar_capacity[i] * solar_cf[t] for i in 1:Nsolar))
 @expression(m, wind_available[t=1:steps],  sum(wind_build[i] * wind_capacity[i] * wind_cf[t]  for i in 1:Nwind))
 @expression(m, gas_available[t=1:steps], sum(gas_build[i] * gas_capacity[i] for i in 1:Ngas))
 
-##availalable power and store avail for batteries
+# availalable power and store avail for batteries
 @expression(m, batt_pwr_available, sum(batt_build[i] * batt_capacity[i] for i in 1:Nbatt))
 @expression(m, batt_store_available, sum(batt_build[i] * batt_storage[i] for i in 1:Nbatt))
 
@@ -238,7 +251,7 @@ save_var_csv(gas_build, "gas_build")
 save_var_csv(batt_build, "batt_build")
 
 # Save time series variables
-df = DataFrame(
+dispatch_df = DataFrame(
     load = load_increase, 
     solar_dispatch = value.(solar_dispatch),
     wind_dispatch  = value.(wind_dispatch),
@@ -247,9 +260,46 @@ df = DataFrame(
     StoreOut       = value.(StoreOut),
     InStorage      = value.(InStorage)
 )
-CSV.write(joinpath(results_dir, "dispatch_timeseries.csv"), df)
+CSV.write(joinpath(results_dir, "dispatch_timeseries.csv"), dispatch_df)
 
 # Save expressions
 save_var_csv(solar_available, "solar_available")
 save_var_csv(wind_available, "wind_available")
 save_var_csv(curtailment, "curtailment")
+
+
+# Add capacity additions and built projects to bus_df
+capacity_additions = [value(station_additions[i]) for i in 1:Nbuses]
+projects_built = [String[] for _ in 1:Nbuses]
+
+for (i, bus_id) in enumerate(bus_idx)
+    # Solar
+    for j in 1:Nsolar
+        if solar_buses[j] == bus_id && value(solar_build[j]) > 0.5
+            push!(projects_built[i], "Solar: $(solar_names[j])")
+        end
+    end
+    # Wind
+    for j in 1:Nwind
+        if wind_buses[j] == bus_id && value(wind_build[j]) > 0.5
+            push!(projects_built[i], "Wind: $(wind_names[j])")
+        end
+    end
+    # Gas
+    for j in 1:Ngas
+        if gas_buses[j] == bus_id && value(gas_build[j]) > 0.5
+            push!(projects_built[i], "Gas: $(gas_names[j])")
+        end
+    end
+    # Battery
+    for j in 1:Nbatt
+        if batt_buses[j] == bus_id && value(batt_build[j]) > 0.5
+            push!(projects_built[i], "Battery: $(batt_names[j])")
+        end
+    end
+end
+
+bus_df.capacity_additions = capacity_additions
+bus_df.projects_built = [join(p, "; ") for p in projects_built]
+
+CSV.write(joinpath(results_dir, "bus_results.csv"), bus_df)
