@@ -3,19 +3,19 @@ Midway-Q2005 230kV Line,true,9.4e8,16891
 Miguel 69 kV constraint,false,6.71054e8,431
 Moss Landing-Las Aguilas 230 kV Line,false,0.0,0
 Rio Oso-Brighton 230kV line,true,0.0,574
-Birds Landing-Contra Costa 230kV Line,false,7.0e8,1766
-Antelope-Neenach Constraint,false,1.0e8,2000
-VEA 138kV area constraint,false,3.791300305e8,1367
-Rocklin-Pleaseant grove 115kV line,false,1.25e8,707
+Birds Landing-Contra Costa 230kV Line,true,7.0e8,1766
+Antelope-Neenach Constraint,true,1.0e8,2000
+VEA 138kV area constraint,true,3.791300305e8,1367
+Rocklin-Pleaseant grove 115kV line,true,1.25e8,707
 Woodland- Davis 115kV line,false,9.329e6,109
-Windmaster-Delta pumps 230 kV line,false,4.17332e8,6034
+Windmaster-Delta pumps 230 kV line,true,4.17332e8,6034
 Vaca Dixon-Tesla 500kV Line,false,2.851848e9,8645
-Midway 230/115kV TB #3,false,1.5e8,784
-Semitropic-Midway 115kV Line,false,7.6e8,637
-GLW 230kV area constraint,false,3.563877756e8,1285
+Midway 230/115kV TB #3,true,1.5e8,784
+Semitropic-Midway 115kV Line,true,7.6e8,637
+GLW 230kV area constraint,true,3.563877756e8,1285
 Internal San Diego Area constraint,false,2.595945198e8,936
-Devers-Red Bluff Constraint,false,1.386722862e9,5000
-Control to Inyokern area constraint,false,3.29e8,186
+Devers-Red Bluff Constraint,true,1.386722862e9,5000
+Control to Inyokern area constraint,true,3.29e8,186
 Kramer to Victor Area Constraint,true,3.344775543e8,1206
 Lakeville-Ignacio 230 kV line,true,0.0,861
 Panoche- Mendota 115 kV line,true,0.0,2019
@@ -24,15 +24,15 @@ Diablo–Gates 500 kV line,false,8.3e8,4125
 Bell-Placer 115kV Line,false,1.85e8,480
 Dumbarton-Newark 115 kV line,false,2.712429918e8,978
 Eastshore-San Mateo 230 kV line,false,0.0,548
-East of Miguel constraint,false,7.82943728e8,2823
+East of Miguel constraint,true,7.82943728e8,2823
 Grant - Eastshore #2 line 115 kV,false,1.25e8,290
 Encina - San Luis Rey 230 kV constraint,false,2.06899051e8,746
-South of Magunden Constraint,false,4.358e9,2000
+South of Magunden Constraint,true,4.358e9,2000
 Cortina-Eagle Rock 115 kV line,false,5.0e7,50
-Lugo - Victorville area constraint,false,2.165e9,6800
+Lugo - Victorville area constraint,true,2.165e9,6800
 Eagle Mountain Constraint,false,1.182e9,600
 Morganhill-Metcalf 115kV Line,false,3.8e8,712
-Los Esteros-Silicon Valley 230 kV,false,9.651591121e7,348
+Los Esteros-Silicon Valley 230 kV,true,9.651591121e7,348
 Kasson Jct-Heinz 115 kV line,false,1.7e9,1255
 Sobrante-Moraga 230 kV line,true,0.0,653
 Del Amo - Barre Area Constraint,false,1.1e7,1058

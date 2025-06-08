@@ -71,12 +71,15 @@ batt_proj_cost = batt_data[:, 4]
 batt_names = batt_data[:, 1]
 
 #### Constants
-curtail_cost = 0           # $/MWh
-emissions_cost = 150        # $/ton
+curtail_cost = 10000           # $/MWh
+emissions_cost = 55        # $/ton
 gas_emissions = 0.20196     # ton/MWh
-efficiency_batt = .95
-inital_soc = 0.5
+η_rt = 0.86
+η_ch = sqrt(η_rt)  
+η_dis = sqrt(η_rt) 
+inital_soc = 0.5 
 final_soc = 0.5
+wear_cost = 200.0      # $ per MWh
 
 Nconstraints = length(constraint_to_cost_inc)
 Nbuses = length(bus_idx)
@@ -141,6 +144,21 @@ end
 # Last week: storage starts from final_soc TODO adding this makes the model weird 
 @constraint(m, InStorage[steps] == batt_store_available * final_soc)
 
+# ensuring that battery does not charge and discharge at same time
+# @variable(m, b_mode[1:steps], Bin)
+# @constraint(m, [t=1:steps], StoreIn[t] ≤ M * b_mode[t])
+# @constraint(m, [t=1:steps], StoreOut[t] ≤ M * (1 - b_mode[t]))
+
+# counting how often battery charging changes by alot so that we can minimize and save battery life
+depth_trigger = 0.1 * batt_store_available
+@variable(m, s[2:steps] ≥ 0)                         # slack ≥ excess depth
+@expression(m, Δ[t = 2:steps],  InStorage[t] - InStorage[t-1])   # hourly swing (MWh)
+# Slack must cover the excess above +depth or –depth
+@constraint(m, [t=2:steps],  s[t] ≥  Δ[t] - depth_trigger)
+@constraint(m, [t=2:steps],  s[t] ≥ -Δ[t] - depth_trigger)
+@expression(m, wear, sum(s[t] for t=2:steps))        # total MWh of “over-depth”
+
+
 # Storage bounds for all t
 for t = 1:steps
     @constraint(m, InStorage[t] <= batt_store_available)
@@ -151,7 +169,7 @@ end
 
 # Storage update for t >= 2
 for t = 2:steps
-    @constraint(m, InStorage[t] == InStorage[t-1] + StoreIn[t] - StoreOut[t])
+    @constraint(m, InStorage[t] == InStorage[t-1] + StoreIn[t] * η_ch - StoreOut[t] / η_dis)
 end
 
 # Dispatched cannot exceed available
@@ -161,13 +179,13 @@ end
 
 
 # Power balance: supply == demand (allow for curtailemt)
-@constraint(m, [t=1:steps], load_increase[t] == solar_dispatch[t] + wind_dispatch[t] + gas_dispatch[t] - StoreIn[t] + (StoreOut[t]) * efficiency_batt)
+@constraint(m, [t=1:steps], load_increase[t] == solar_dispatch[t] + wind_dispatch[t] + gas_dispatch[t] - StoreIn[t]/η_ch + (StoreOut[t]*η_dis))
 
 # For each time step, batteries can only charge from excess generation
-@constraint(m, [t=1:steps], StoreIn[t] <= solar_dispatch[t] + wind_dispatch[t] + gas_dispatch[t] - load_increase[t] + StoreOut[t] * efficiency_batt)
+@constraint(m, [t=1:steps], StoreIn[t] <= solar_dispatch[t] + wind_dispatch[t] + gas_dispatch[t] - load_increase[t] + StoreOut[t]*η_dis)
 
 # Curtailment; postive so that model does not increase negative curtailment
-@expression(m, curtailment[t=1:steps], solar_available[t] + wind_available[t] - solar_dispatch[t] - wind_dispatch[t] - StoreIn[t])
+@expression(m, curtailment[t=1:steps], solar_available[t] + wind_available[t] - solar_dispatch[t] - wind_dispatch[t] - StoreIn[t]/η_ch)
 @constraint(m, [t=1:steps], curtailment[t] >= 0)
 @expression(m, total_curtailment_cost, sum(curtailment[t] * curtail_cost for t in 1:steps))
 
@@ -182,7 +200,9 @@ end
     sum(batt_build[i] * batt_proj_cost[i] for i in 1:Nbatt) +
     total_curtailment_cost +
     emissions_cost * emissions + 
-    upgrade_costs
+    upgrade_costs +
+    StoreOut[1] * 1e12 + # we do not want to discharge on the first hour
+    wear * wear_cost
 )
 
 optimize!(m)
@@ -236,6 +256,17 @@ for i in 1:Nbuses
     end
 end
 
+println("\n--- Capacity Additions ---")
+total_solar_capacity = sum(solar_capacity[i] for i in 1:Nsolar if value(solar_build[i]) > 0.5)
+total_wind_capacity = sum(wind_capacity[i] for i in 1:Nwind if value(wind_build[i]) > 0.5)
+total_batt_capacity = sum(batt_capacity[i] for i in 1:Nbatt if value(batt_build[i]) > 0.5)
+total_batt_storage = sum(batt_storage[i] for i in 1:Nbatt if value(batt_build[i]) > 0.5)
+
+println("Total Solar Capacity Added (MW): ", total_solar_capacity)
+println("Total Wind Capacity Added (MW): ", total_wind_capacity)
+println("Total Battery Power Added (MW): ", total_batt_capacity)
+println("Total Battery Storage Added (MWh): ", total_batt_storage)
+
 println("\nObjective value (total cost): \$", objective_value(m))
 max_load_val = maximum([value(load_increase[t]) for t in 1:steps])
 println("Max modeled load (MW): ", max_load_val)
@@ -243,18 +274,27 @@ println("Max modeled load (MW): ", max_load_val)
 println("Total Emissions (tons CO₂): ", value(emissions))
 println("Total Curtailment (MWh): ", sum(value.(curtailment)))
 println("Total Upgrade Costs (\$): ", value(upgrade_costs))
+println("Total Emissions Cost (\$): ", value(emissions) * emissions_cost)
+println("Total Curtailment Cost (\$): ", value(total_curtailment_cost))
 
 total_load = sum(value.(load_increase))
-total_generation = sum(value.(solar_dispatch)) + sum(value.(wind_dispatch)) + sum(value.(gas_dispatch)) + sum(value.(StoreOut)) * efficiency_batt - sum(value.(StoreIn))
+total_generation = sum(value.(solar_dispatch)) + sum(value.(wind_dispatch)) + sum(value.(gas_dispatch)) + sum(value.(StoreOut)) * η_dis - sum(value.(StoreIn) / η_ch)
 println("Total Load (MWh): ", total_load)
-println("Total Generation (MWh): ", total_generation)
+println("Total (minus storage in) Generation (MWh): ", total_generation)
+
+println("\n--- Generation and Storage Summary ---")
+println("Total Solar Generation (MWh): ", sum(value.(solar_dispatch)))
+println("Total Wind Generation (MWh): ", sum(value.(wind_dispatch)))
+println("Total Gas Generation (MWh): ", sum(value.(gas_dispatch)))
+println("Total Battery Charge (MWh): ", sum(value.(StoreIn)))
+println("Total Battery Discharge (MWh): ", sum(value.(StoreOut)))
 
 hours = 1:steps
 
 solar_vals = value.(solar_dispatch)
 wind_vals  = value.(wind_dispatch)
 gas_vals   = value.(gas_dispatch)
-batt_vals  = value.(StoreOut) * efficiency_batt .- value.(StoreIn)
+batt_vals  = value.(StoreOut)*η_dis .- value.(StoreIn)/η_ch
 load_vals  = value.(load_increase)
 
 gr()
@@ -266,7 +306,8 @@ p = plot(
     #label=["Solar Dispatch" "Wind Dispatch" "Gas Dispatch" "Battery Dispatch"],
     xlabel="Hour", ylabel="Power (MW)",
     title="Stacked Resource Dispatch (First Week)",
-    legend=:topright,
+    #legend=:topright,'
+    legend=false,
     lw=1.5,
     fillalpha=0.7,
     c=[:orange :blue :gray :purple],
@@ -278,6 +319,21 @@ results_dir = "results"
 isdir(results_dir) || mkdir(results_dir)
 
 savefig(p, joinpath(results_dir, "dispatch_plot.png"))
+
+# Plot battery state of charge (InStorage) for the first two weeks (24*7*2 = 336 hours)
+soc_hours = 1:(24*7*2)
+soc_vals = value.(InStorage)[soc_hours]
+
+p_soc = plot(
+    soc_hours, soc_vals,
+    xlabel="Hour",
+    ylabel="State of Charge (MWh)",
+    title="Battery State of Charge (First Two Weeks)",
+    legend=false,
+    lw=2,
+    lc=:purple
+)
+savefig(p_soc, joinpath(results_dir, "battery_soc_first2weeks.png"))
 
 
 # Helper function to save variable arrays
@@ -298,15 +354,19 @@ dispatch_df = DataFrame(
     solar_dispatch = value.(solar_dispatch),
     wind_dispatch  = value.(wind_dispatch),
     gas_dispatch     = value.(gas_dispatch),
+    curtailment      = value.(curtailment),
     StoreIn        = value.(StoreIn),
     StoreOut       = value.(StoreOut),
-    InStorage      = value.(InStorage)
+    InStorage      = value.(InStorage),
+    solar_available = value.(solar_available), 
+    wind_available = value.(wind_available),
 )
 CSV.write(joinpath(results_dir, "dispatch_timeseries.csv"), dispatch_df)
 
 # Save expressions
 save_var_csv(solar_available, "solar_available")
 save_var_csv(wind_available, "wind_available")
+save_var_csv(gas_available, "wind_available")
 save_var_csv(curtailment, "curtailment")
 
 
@@ -354,4 +414,9 @@ constraint_results = DataFrame(
     cost = [constraint_to_cost_inc[i][2] for i in 1:Nconstraints],
     increment_amount = [constraint_to_cost_inc[i][3] for i in 1:Nconstraints]
 )
+
 CSV.write(joinpath(results_dir, "constraint_results.csv"), constraint_results)
+
+# Save the slack variable s to CSV
+s_df = DataFrame(slack = [value(s[t]) for t in 2:steps])
+CSV.write(joinpath(results_dir, "slack_s.csv"), s_df)
