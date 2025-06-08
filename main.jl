@@ -1,6 +1,8 @@
 using CSV, JuMP, Gurobi, DataFrames, Plots, FileIO
 ### Import the data
 
+#Testing update
+
 ## solar and wind capacity factor
 
 load_288 = "191_data_288_from_kmeansv2.csv"
