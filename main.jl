@@ -3,11 +3,11 @@ using CSV, JuMP, Gurobi, DataFrames, Plots, FileIO
 
 ## solar and wind capacity factor
 
-load_288 = "191_data_288_from_kmeansv2.csv"
-load_288 = CSV.read(load_288, DataFrame)
-solar_cf = load_288[:, 4]
-wind_cf = load_288[:, 5]
-load_increase = load_288[:, 3]
+load_8760_path = "191_data_8760_from_kmeansv2.csv"
+load_8760 = CSV.read(load_8760_path, DataFrame)
+solar_cf = load_8760[:, 4]
+wind_cf = load_8760[:, 5]
+load_increase = load_8760[:, 3]
 
 
 ## population at each bus
@@ -71,7 +71,7 @@ batt_proj_cost = batt_data[:, 4]
 batt_names = batt_data[:, 1]
 
 #### Constants
-curtail_cost = 10           # $/MWh
+curtail_cost = 0           # $/MWh
 emissions_cost = 150        # $/ton
 gas_emissions = 0.20196     # ton/MWh
 efficiency_batt = .95
@@ -85,7 +85,7 @@ Nwind = length(wind_buses)
 Ngas = length(gas_buses)
 Nbatt = length(batt_buses)
 
-steps = 288
+steps = 8760
 
 #### Model
 m = Model(Gurobi.Optimizer)
@@ -218,6 +218,24 @@ for i in 1:Nbatt
     end
 end
 
+println("\nSelected Constraints Incremented:")
+for i in 1:Nconstraints
+    if value(constraint_incremented[i]) > 0.5
+        println("  - Constraint: ", constraint_to_cost_inc[i][1], 
+                " | Cost: \$", constraint_to_cost_inc[i][2], 
+                " | Increment Amount: ", constraint_to_cost_inc[i][3])
+    end
+end
+
+println("\nBuses Incremented:")
+for i in 1:Nbuses
+    if value(station_increment[i]) > 1e-6
+        println("  - Bus IDX: ", bus_idx[i], 
+                " | Name: ", bus_df.Station[i], 
+                " | Incremented by: ", value(station_increment[i]))
+    end
+end
+
 println("\nObjective value (total cost): \$", objective_value(m))
 max_load_val = maximum([value(load_increase[t]) for t in 1:steps])
 println("Max modeled load (MW): ", max_load_val)
@@ -241,18 +259,20 @@ load_vals  = value.(load_increase)
 
 gr()
 
+# Plot only the first week (24*7 = 168 hours)
+week_hours = 1:(24*7*2) #change for diffrent runs and effects
 p = plot(
-    hours, [solar_vals wind_vals gas_vals batt_vals],
-    label=["Solar Dispatch" "Wind Dispatch" "Gas Dispatch" "Battery Dispatch"],
+    week_hours, [solar_vals[week_hours] wind_vals[week_hours] gas_vals[week_hours] batt_vals[week_hours]],
+    #label=["Solar Dispatch" "Wind Dispatch" "Gas Dispatch" "Battery Dispatch"],
     xlabel="Hour", ylabel="Power (MW)",
-    title="Stacked Resource Dispatch Over Time",
+    title="Stacked Resource Dispatch (First Week)",
     legend=:topright,
     lw=1.5,
     fillalpha=0.7,
     c=[:orange :blue :gray :purple],
     stacked=true
 )
-plot!(p, hours, load_vals, label="Load", lw=2, lc=:black, linestyle=:dash)
+plot!(p, week_hours, load_vals[week_hours], label="Load", lw=2, lc=:black, linestyle=:dash)
 
 results_dir = "results"
 isdir(results_dir) || mkdir(results_dir)
