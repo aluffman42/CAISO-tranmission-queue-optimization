@@ -1,0 +1,246 @@
+﻿Name,Capacity,Path Cost,Bus Index,Bus Name,Cap Increase,Price,Constraint Name
+"Northern Orchard Solar PV, LLC",150,17662650,87,LAKEVIEW,16891,940000000,Midway-Q2005 230kV Line
+BCE Seal Beach,12,7994632,286,ALAMITOS,800,28000000,Hinson - Del Amo Constraint
+Rosamond South 1,140,5861248.5,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Luna Valley,200,16001663,109,MENDOTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Bellefield Solar and Energy Storage Farm,500,21468924,210,WINDHUB,2500,612000000,Windhub Constraint
+Pastoria Solar,105.2,4242198,143,PASTORIA,2000,100000000,Antelope-Neenach Constraint
+Aratina Solar Center 1B,200,2751461.25,86,KRAMER,1206,334477554.3,Kramer to Victor Area Constraint
+Solar Star 3,24,2801147.25,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Grape,246.4,11649800,70,HENRIETTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Angela Solar Project,40,11772523,1,ALPAUGH,16891,940000000,Midway-Q2005 230kV Line
+"Windhub Solar B, LLC",20,3891138,210,WINDHUB,2500,612000000,Windhub Constraint
+Cherry,249.7,14478914,70,HENRIETTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+"Desert Breeze Solar, LLC",125,6177135.5,167,SANDLOT,1206,334477554.3,Kramer to Victor Area Constraint
+"Lockhart Solar PV IV, LLC",80,5143683.5,167,SANDLOT,1206,334477554.3,Kramer to Victor Area Constraint
+Bellefield 2 Solar & Energy Storage Farm,500,22955270,210,WINDHUB,2500,612000000,Windhub Constraint
+Aramis I Solar Project,100,1369904.5,21,CAYETANO,6034,417332000,Windmaster-Delta pumps 230 kV line
+Easley Solar,290,3560835.25,157,RED BLUFF,5000,1386722862,Devers-Red Bluff Constraint
+EDPR CA Solar Park VI LLC (CA) Hybrid,200,13652995,109,MENDOTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+JVR Energy Park LLC,90,7855551,48,EAST COUNTY,2823,782943728,East of Miguel constraint
+"Portal Ridge Solar A, LLC",19,5301088,285,ANTELOPE,2000,100000000,Antelope-Neenach Constraint
+Purple Sage Energy Center,400,17642800,196,CRAZY EYES,1285,356387775.6,GLW 230kV area constraint
+Chalan,64.9,625750.1875,3,ARCO (PGE),16891,940000000,Midway-Q2005 230kV Line
+Sand Luis West,125,7809046.5,60,GATES,16891,940000000,Midway-Q2005 230kV Line
+Pelicans Jaw Hybrid Solar,440,16893748,3,ARCO (PGE),16891,940000000,Midway-Q2005 230kV Line
+Bellefield 3 Solar and Battery Storage,150,30835808,210,WINDHUB,2500,612000000,Windhub Constraint
+Dynamo Solar LLC,24.5,5816906,197,TULUCAY,861,0,Lakeville-Ignacio 230 kV line
+Zeta Solar & Storage,75,28547528,279,LOS BANOS,16891,940000000,Midway-Q2005 230kV Line
+Elisabeth Solar,350,141718160,251,BLYTHE,2823,782943728,East of Miguel constraint
+Syracuse and Tours Renewable Energy,40,12770136,210,WINDHUB,2500,612000000,Windhub Constraint
+Rough Hat,400,13254060,196,CRAZY EYES,1285,356387775.6,GLW 230kV area constraint
+Kingsley Solar Farm,225,3502300,75,IMPERIAL VALLEY,2823,782943728,East of Miguel constraint
+Lycan Solar Project,400,24176362,157,RED BLUFF,5000,1386722862,Devers-Red Bluff Constraint
+Bonanza Solar and Storage Project,300,16457488,205,VISTA (VEA),1367,379130030.5,VEA 138kV area constraint
+Gibson Solar Project - Hybrid,13,1882298.875,102,MADISON (PGE),1766,700000000,Birds Landing-Contra Costa 230kV Line
+Arida Solar (Hybrid),370,19517750,118,MOHAVE,6800,2165000000,Lugo - Victorville area constraint
+Sienna Solar Farm,200,50134780,272,VICTOR,1221,338637722.9,Victor to Lugo Area Constraint
+Rexford 2 Solar Farm,200,6206200.5,203,VESTAL,2000,4358000000,South of Magunden Constraint
+Kama 3 LLC,86,3603985,73,HOPLAND,50,50000000,Cortina-Eagle Rock 115 kV line
+Sienna 2 Solar and Storage Project,55,52753624,272,VICTOR,1221,338637722.9,Victor to Lugo Area Constraint
+"Lockhart Solar PV, LLC",100.4,6231409,167,SANDLOT,1206,334477554.3,Kramer to Victor Area Constraint
+University of California Santa Cruz,1.8,40389848,241,GREEN VALLEY (PGE),712,380000000,Morganhill-Metcalf 115kV Line
+Desert Quartzite,300,6947123,29,COLORADO RIVER,5000,1386722862,Devers-Red Bluff Constraint
+White Wing Solar,175,138477600,251,BLYTHE,2823,782943728,East of Miguel constraint
+RE Gaskell West 2 LLC,45,14540007,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+RE Gaskell West 4 LLC,20,15774447,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Antelope Expansion 1B,17,5419782.5,285,ANTELOPE,2000,100000000,Antelope-Neenach Constraint
+Almond,19.9,3500536.5,70,HENRIETTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Aquamarine,250,6386402,70,HENRIETTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Antelope Expansion 3A,15,5558509.5,285,ANTELOPE,2000,100000000,Antelope-Neenach Constraint
+Antelope Expansion 3B,5,4846345.5,285,ANTELOPE,2000,100000000,Antelope-Neenach Constraint
+Drew Solar LLC,100,6206630,75,IMPERIAL VALLEY,2823,782943728,East of Miguel constraint
+Athos Solar Project,250,8111063,157,RED BLUFF,5000,1386722862,Devers-Red Bluff Constraint
+Sun Streams 2,150,191651600,251,BLYTHE,2823,782943728,East of Miguel constraint
+Camino Solar Hybrid,44,11332059,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Slate Hybrid,67.5,1915461.5,70,HENRIETTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Silveira Ranch Road Solar,1,12649637,74,IGNACIO,50,50000000,Cortina-Eagle Rock 115 kV line
+Solar Blue,250,8356260,70,HENRIETTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Chestnut,150.6,9693404,70,HENRIETTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Camp San Luis Obispo,1.2,15891009,164,SAN LUIS OBISPO,784,150000000,Midway 230/115kV TB #3
+Kern Valley SP,3,14508192,181,SMYRNA,16891,940000000,Midway-Q2005 230kV Line
+Central 40,40,18990176,280,QUINTO,4931,0,Los Banos 500/230kV TB
+DGS Valley State Prison,2.3,9605860,25,CHOWCHILLA,16891,940000000,Midway-Q2005 230kV Line
+San Diego - EMDF at San Diego,2.9,3711809.5,134,OTAY MESA,4754,29971000,Silvergate - Bay Blvd 230 kV constraint
+San Diego - NCRC at Vista,1.8,8684185,175,SHADOWRIDGE,936,259594519.8,Internal San Diego Area constraint
+"Maverick Solar 6, LLC",100,8822812,157,RED BLUFF,5000,1386722862,Devers-Red Bluff Constraint
+"Fifth Standard Solar PV, LLC (Hybrid)",150,2744146.5,60,GATES,16891,940000000,Midway-Q2005 230kV Line
+Wonderful Orchards - Westside,5,17296916,3,ARCO (PGE),16891,940000000,Midway-Q2005 230kV Line
+"ESCA-LL-COLTON, LLC",2.6,5531816,258,VISTA (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+EMWD - Perris Valley RWRF,3.4,3696968.75,261,VALLEY (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+EMWD - San Jacinto RWRF NEM,1.3,20711376,261,VALLEY (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+EMWD - Sun City RWRF,1.6,8772343,261,VALLEY (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+EMWD - San Jacinto RES BCT,4.2,20375298,261,VALLEY (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+CSU San Jose State University,1.7,2351452.75,229,SAN JOSE STA. B,712,380000000,Morganhill-Metcalf 115kV Line
+El Dorado County,1.5,40523568,63,GOLD HILL,707,125000000,Rocklin-Pleaseant grove 115kV line
+California State Univ at Channel Islands,3.7,23771760,119,MOORPARK,2000,4358000000,South of Magunden Constraint
+EMWD - Moreno Valley RWRF,2.4,16988484,261,VALLEY (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+Amazon - Stockton - Roof (SCK1) - (CA),2.6,4215084,233,WEBER,460,400000000,Bellota-Weber 230kV line
+Vallecitos Water District,1.4,14803627,175,SHADOWRIDGE,936,259594519.8,Internal San Diego Area constraint
+Byron Highway Solar,5,6225711,82,KELSO,6034,417332000,Windmaster-Delta pumps 230 kV line
+Arlington Energy Center II,100,15536631,29,COLORADO RIVER,5000,1386722862,Devers-Red Bluff Constraint
+Resurgence Solar,90,2205617,86,KRAMER,1206,334477554.3,Kramer to Victor Area Constraint
+Hudson - High Desert Hybrid,100,7649214,263,ROADWAY,1206,334477554.3,Kramer to Victor Area Constraint
+"Rabbitbrush Solar, LLC",100,11859663,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Rexford Solar Farm,300,342236.1563,203,VESTAL,2000,4358000000,South of Magunden Constraint
+Lake Herman,5,29573224,197,TULUCAY,861,0,Lakeville-Ignacio 230 kV line
+Dos Palos,1,30250644,38,DAIRYLAND,358,125000000,Merced 115/70kV TB#2
+"El Dorado Solar, LLC",1.5,9624024,63,GOLD HILL,707,125000000,Rocklin-Pleaseant grove 115kV line
+Amazon PSP1,3.8,12322499,256,EL CASCO,3350,89000000,Etiwanda-Rancho Vista Constraint
+Redwood Coast Airport Microgrid,2.2,31290658,222,FAIRWAY (PGE),16891,940000000,Midway-Q2005 230kV Line
+Daggett 2,182,384688.0313,32,COOL WATER,1206,334477554.3,Kramer to Victor Area Constraint
+Deer Creek 2,1.3,21486826,63,GOLD HILL,707,125000000,Rocklin-Pleaseant grove 115kV line
+Chaparral Springs,102,11446451,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Edwards Sanborn E3,27.1,20993940,210,WINDHUB,2500,612000000,Windhub Constraint
+Edwards Sanborn E1A,149.3,19756530,210,WINDHUB,2500,612000000,Windhub Constraint
+Edwards Sanborn E2,137.8,21380908,210,WINDHUB,2500,612000000,Windhub Constraint
+Scarlet Solar (CA),200,17403518,109,MENDOTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Luciana,55.8,3128901.25,203,VESTAL,2000,4358000000,South of Magunden Constraint
+Trona Solar III,2,56951116,77,INYOKERN,186,329000000,Control to Inyokern area constraint
+Edwards Sanborn S3,37.7,17793436,210,WINDHUB,2500,612000000,Windhub Constraint
+Edwards Sanborn S1,44.6,16642753,210,WINDHUB,2500,612000000,Windhub Constraint
+"BigBeau Solar, LLC",70,12954448,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Blythe Mesa Solar II,223.6,9028916,251,BLYTHE,2823,782943728,East of Miguel constraint
+Fremont CA AutoFactory,0.3,5074576.5,124,NEWARK,653,0,Sobrante-Moraga 230 kV line
+Berrenda Mesa Water District,6.4,19699098,3,ARCO (PGE),16891,940000000,Midway-Q2005 230kV Line
+IGS KSBD,4.3,3162504.75,252,SAN BERNARDINO,3350,89000000,Etiwanda-Rancho Vista Constraint
+CA - DGS RFP - RJ Donovan State Prison,2,96708080,167,SANDLOT,1206,334477554.3,Kramer to Victor Area Constraint
+CA-DGS-California Correctional Inst,4,42590112,67,GRIMMWAY-MALAGA,637,760000000,Semitropic-Midway 115kV Line
+University of the Pacific,4.5,4016884.5,284,STAGG,4931,0,Los Banos 500/230kV TB
+Five H Farms Solar Array,1,4073689.75,25,CHOWCHILLA,16891,940000000,Midway-Q2005 230kV Line
+Van der Kooi Dairy Solar Array,1,12679935,70,HENRIETTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Donaghy-Stockton,1.1,4740380.5,233,WEBER,460,400000000,Bellota-Weber 230kV line
+CSP Los Angeles,2.3,7217521.5,285,ANTELOPE,2000,100000000,Antelope-Neenach Constraint
+West Village Solar - Array 1Community So,1.2,4016866.25,39,DAVIS (PGE),109,9329000,Woodland- Davis 115kV line
+Wonderful Huller & Shellling,1.5,24211314,192,TEMBLOR,784,150000000,Midway 230/115kV TB #3
+Wonderful Lost Hills,17.1,12937449,3,ARCO (PGE),16891,940000000,Midway-Q2005 230kV Line
+Danell Bros Inc,2.6,19942338,33,CORCORAN,0,0,Moss Landing-Las Aguilas 230 kV Line
+CA - Ventura Co CCD - Moorpark College,2.6,9288428,119,MOORPARK,2000,4358000000,South of Magunden Constraint
+Lincoln WWTF Hybrid,3,5649835,151,PLEASANT GROVE,574,0,Rio Oso-Brighton 230kV line
+Bodega Avenue Solar LLC,1,9357997,34,CORONA (PGE),861,0,Lakeville-Ignacio 230 kV line
+Gilead Oceanside Solar Project,1.5,3831406.25,288,SAN LUIS REY,2201,210600000,Talega 230 kV constraint
+CA-Ventura Co CCD-Oxnard College Canopy,1.5,20381448,170,SANTA CLARA,2000,4358000000,South of Magunden Constraint
+"Laredo Detention Facility - Solar 2, 3",3.1,4317137,94,LERDO,637,760000000,Semitropic-Midway 115kV Line
+Sealed Air Madera Solar Project,3,7438587.5,12,BORDEN,0,0,Moss Landing-Las Aguilas 230 kV Line
+Graniterock Quarry,4.4,20772872,241,GREEN VALLEY (PGE),712,380000000,Morganhill-Metcalf 115kV Line
+Sierra Pacific Chinese Camp,3.6,16156581,245,MELONES (PGE),1255,1700000000,Kasson Jct-Heinz 115 kV line
+CA-DGS-California Men's Colony,2.2,12069453,164,SAN LUIS OBISPO,784,150000000,Midway 230/115kV TB #3
+CA-DGS- RFP-Correctional Training Fac,1.6,33571280,28,COBURN,0,0,Moss Landing-Las Aguilas 230 kV Line
+CA-DGS RFP-Pleasant Valley State Prison,2,12382416,60,GATES,16891,940000000,Midway-Q2005 230kV Line
+CA - Fresno County - Juvenile Hall,2.8,10265944,107,MCCALL,16891,940000000,Midway-Q2005 230kV Line
+Amazon Bakersfield 1 Solar Project,4.3,4076389,83,KERN OIL,637,760000000,Semitropic-Midway 115kV Line
+Calibrant Bakersfield LLC,1.3,3424236.75,0,7TH STANDARD,16891,940000000,Midway-Q2005 230kV Line
+Google Moffett Park Solar Project,0.9,9267024,99,LOS ESTEROS,348,96515911.21,Los Esteros-Silicon Valley 230 kV
+Gilead Sciences La Verne Rooftop Solar,1.7,17229544,313,CHINO,0,0,SCE Metro Area Default Constraint
+West Valley Mission CCD Solar Project,2.7,2886242.25,249,SARATOGA,653,0,Sobrante-Moraga 230 kV line
+Orange Coast College PH2 Solar Project,3.1,3940248.5,304,ELLIS (SCE),0,0,SCE Metro Area Default Constraint
+CA - Madera USD - Madera South HS,1.2,7060763.5,12,BORDEN,0,0,Moss Landing-Las Aguilas 230 kV Line
+BBARWA,1.2,74420864,252,SAN BERNARDINO,3350,89000000,Etiwanda-Rancho Vista Constraint
+Niagara Bottling - Rialto,4.2,13214548,237,ETIWANDA,3350,89000000,Etiwanda-Rancho Vista Constraint
+Sandrini Solar 200,200,4525353.5,87,LAKEVIEW,16891,940000000,Midway-Q2005 230kV Line
+Sandrini Solar 100,100,2461811,87,LAKEVIEW,16891,940000000,Midway-Q2005 230kV Line
+Edwards Sanborn E1B,154.4,21959432,210,WINDHUB,2500,612000000,Windhub Constraint
+Edwards Sanborn E4,148.9,23832320,210,WINDHUB,2500,612000000,Windhub Constraint
+Edwards Sanborn E5,68,23462524,210,WINDHUB,2500,612000000,Windhub Constraint
+Edwards Sanborn S4,41.2,17981496,210,WINDHUB,2500,612000000,Windhub Constraint
+POM Juice Solar,1.5,15292302,156,RECTOR,2000,4358000000,South of Magunden Constraint
+POM Beverage Solar,1.8,15613665,156,RECTOR,2000,4358000000,South of Magunden Constraint
+Oberon Solar Project,250,9060376,157,RED BLUFF,5000,1386722862,Devers-Red Bluff Constraint
+"Canal Energy S23, LLC",4.1,8165209,33,CORCORAN,0,0,Moss Landing-Las Aguilas 230 kV Line
+Victory Pass,200,527043.6875,157,RED BLUFF,5000,1386722862,Devers-Red Bluff Constraint
+Dover Dairy,1.1,24945322,107,MCCALL,16891,940000000,Midway-Q2005 230kV Line
+Ventura Solar,2.9,19710268,119,MOORPARK,2000,4358000000,South of Magunden Constraint
+Wonderful Nursery,2.3,4905478.5,174,SEMITROPIC,16891,940000000,Midway-Q2005 230kV Line
+Ocotillo Wells,50,50555776,130,OCOTILLO,2823,782943728,East of Miguel constraint
+"Mesquite Solar 4, LLC",52.5,181849184,251,BLYTHE,2823,782943728,East of Miguel constraint
+"Java Solar, LLC",13.5,7318484,123,MUSTANG,0,0,Moss Landing-Las Aguilas 230 kV Line
+Sheep Creek Community Solar Farm,3,16075376,263,ROADWAY,1206,334477554.3,Kramer to Victor Area Constraint
+Grossmont-Cuyamaca-Cuyamaca Col. Solar &,1.4,10031574,50,EL CAJON,431,671054000,Miguel 69 kV constraint
+POM Plant 1,2.4,6647483,169,SANGER,16891,940000000,Midway-Q2005 230kV Line
+POM Plant 2,1.6,6528039,169,SANGER,16891,940000000,Midway-Q2005 230kV Line
+Lake Elsinore Canopies - Lakeside HS,1,10475907,287,ALBERHILL,3350,89000000,Etiwanda-Rancho Vista Constraint
+Proxima,190,3233301.5,277,STANISLAUS RECOVERY,16891,940000000,Midway-Q2005 230kV Line
+Wonderful Firebaugh,5.4,19283956,109,MENDOTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Wonderful Kings,3.5,4970761.5,3,ARCO (PGE),16891,940000000,Midway-Q2005 230kV Line
+CA Jurupa Valley 3251 De Forest Circle,4.5,5875148,314,MIRA LOMA (SCE),0,0,SCE Metro Area Default Constraint
+West Tambo Clean Power II,2,23681608,110,MERCED (PGE),16891,940000000,Midway-Q2005 230kV Line
+CA Manteca 730 Spreckels Ave,1.5,4330228.5,104,MANTECA,1255,1700000000,Kasson Jct-Heinz 115 kV line
+BCE Los Alamitos 2,10,5435393,286,ALAMITOS,800,28000000,Hinson - Del Amo Constraint
+BCE Los Alamitos 1,10,4617190,286,ALAMITOS,800,28000000,Hinson - Del Amo Constraint
+Baldy Mesa Solar & Storage,150,5434358.5,263,ROADWAY,1206,334477554.3,Kramer to Victor Area Constraint
+IGS OXR1,4.8,13849361,170,SANTA CLARA,2000,4358000000,South of Magunden Constraint
+9150 Hermosa Solar GM,1.3,6270781.5,311,RANCHO VISTA,0,0,SCE Metro Area Default Constraint
+McFarland A Solar and Storage,200,142380544,251,BLYTHE,2823,782943728,East of Miguel constraint
+McFarland B Solar and Storage,300,143484080,251,BLYTHE,2823,782943728,East of Miguel constraint
+City of Rosamond (CA),1,23089070,285,ANTELOPE,2000,100000000,Antelope-Neenach Constraint
+Kings CSG 3 LLC Community Solar,3,798591.8125,123,MUSTANG,0,0,Moss Landing-Las Aguilas 230 kV Line
+Visalia CSG LLC,3,618457.25,156,RECTOR,2000,4358000000,South of Magunden Constraint
+Tulare CSG LLC,3,3532931.25,1,ALPAUGH,16891,940000000,Midway-Q2005 230kV Line
+Lockhart Solar PV II,84.4,6901646.5,167,SANDLOT,1206,334477554.3,Kramer to Victor Area Constraint
+Wheeler Ridge,4.5,20880734,87,LAKEVIEW,16891,940000000,Midway-Q2005 230kV Line
+Crystal Farms Local Solar,3.5,4978445.5,69,HELM,0,0,Moss Landing-Las Aguilas 230 kV Line
+Fresno Community Solar,10,7079365.5,206,WEST FRESNO,16891,940000000,Midway-Q2005 230kV Line
+Lost Hills Oilfield,1.9,16102271,3,ARCO (PGE),16891,940000000,Midway-Q2005 230kV Line
+Estrella Solar & Storage,56,13045254,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Raceway Solar & Storage,125,14588441,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Agriculture Capital - Legacy Packing,1.6,21784324,107,MCCALL,16891,940000000,Midway-Q2005 230kV Line
+Bishop Ranch - BR 1-Y,0.7,3648514,166,SAN RAMON,6034,417332000,Windmaster-Delta pumps 230 kV line
+Bishop Ranch - BR 8-P,1,4717762.5,166,SAN RAMON,6034,417332000,Windmaster-Delta pumps 230 kV line
+Vulcan San Emidio Solar,1.4,10130103,87,LAKEVIEW,16891,940000000,Midway-Q2005 230kV Line
+SEPV Cuyama Hybrid,1.6,41255368,190,TAFT,16891,940000000,Midway-Q2005 230kV Line
+Avenue 26 Solar,2.6,6579769.5,25,CHOWCHILLA,16891,940000000,Midway-Q2005 230kV Line
+East Cleveland Road Solar,3,15555633,38,DAIRYLAND,358,125000000,Merced 115/70kV TB#2
+Baldy Mesa 2_Silver Peak Hybrid,50,5306943.5,263,ROADWAY,1206,334477554.3,Kramer to Victor Area Constraint
+Scarlet II Hybrid,200,16003010,109,MENDOTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+"Sunny Cow Solar, LLC",2,7651733,194,TEVIS,16891,940000000,Midway-Q2005 230kV Line
+IPC 25 Solar,2.4,1871649.25,239,SCHULTE,707,125000000,Rocklin-Pleaseant grove 115kV line
+"Case Vander Eyk, Jr Dairy Solar",1.2,6126190,1,ALPAUGH,16891,940000000,Midway-Q2005 230kV Line
+Paulsell,20,1637299.75,277,STANISLAUS RECOVERY,16891,940000000,Midway-Q2005 230kV Line
+Amazon SAN3 Solar Project,4.6,3266198.5,134,OTAY MESA,4754,29971000,Silvergate - Bay Blvd 230 kV constraint
+Cabrillo College,2.4,23231470,241,GREEN VALLEY (PGE),712,380000000,Morganhill-Metcalf 115kV Line
+Bishop Ranch - BR 15-DD,0.4,5473951.5,166,SAN RAMON,6034,417332000,Windmaster-Delta pumps 230 kV line
+Dos Palos Clean Power,3,30568598,38,DAIRYLAND,358,125000000,Merced 115/70kV TB#2
+Tejon Castac Water District Solar,1.3,10772406,143,PASTORIA,2000,100000000,Antelope-Neenach Constraint
+Double J Dairy Array,4,19090894,156,RECTOR,2000,4358000000,South of Magunden Constraint
+Grossmont College,2.6,6387914,50,EL CAJON,431,671054000,Miguel 69 kV constraint
+Lone Oak,2.9,19550248,33,CORCORAN,0,0,Moss Landing-Las Aguilas 230 kV Line
+RB Inyokern Solar WDAT 1203 (CSG),19.9,1545563.125,77,INYOKERN,186,329000000,Control to Inyokern area constraint
+RB Inyokern Solar WDAT 1281 (CSG),11.9,1679389.375,77,INYOKERN,186,329000000,Control to Inyokern area constraint
+Zonneveld Oak Grove,1.5,21546982,107,MCCALL,16891,940000000,Midway-Q2005 230kV Line
+River Ranch Dairy,4,16922840,33,CORCORAN,0,0,Moss Landing-Las Aguilas 230 kV Line
+Rio Vista Solar,2.7,15403348,215,BIRDS LANDING,1766,700000000,Birds Landing-Contra Costa 230kV Line
+Bishop Ranch BR 1-X,0.6,3104358.5,166,SAN RAMON,6034,417332000,Windmaster-Delta pumps 230 kV line
+Highway 43 1887-WD,2.3,1946146.125,176,SHAFTER,16891,940000000,Midway-Q2005 230kV Line
+Terry 1818-WD,4.6,266197.25,22,CHARCA,637,760000000,Semitropic-Midway 115kV Line
+Kern Sunset 1886-WD,2.4,5581061.5,67,GRIMMWAY-MALAGA,637,760000000,Semitropic-Midway 115kV Line
+Open Sky Ranch Inc,1.7,12590498,173,SCHINDLER,0,0,Moss Landing-Las Aguilas 230 kV Line
+City of Atwater NEM,1.5,13323497,110,MERCED (PGE),16891,940000000,Midway-Q2005 230kV Line
+Dixie Creek Dairy Solar,2.9,23319392,33,CORCORAN,0,0,Moss Landing-Las Aguilas 230 kV Line
+Costa View Farms,5,7765456,38,DAIRYLAND,358,125000000,Merced 115/70kV TB#2
+TWC,1.2,10660202,33,CORCORAN,0,0,Moss Landing-Las Aguilas 230 kV Line
+Paso Robles - Municipal Airport,3,17694564,193,TEMPLETON,16891,940000000,Midway-Q2005 230kV Line
+Harris Farms Solar Facility,1.3,16371109,60,GATES,16891,940000000,Midway-Q2005 230kV Line
+Lemoore West,7.9,8372060,123,MUSTANG,0,0,Moss Landing-Las Aguilas 230 kV Line
+CA- US Foods- Livermore,1.2,3242534.75,100,LAS POSITAS,6034,417332000,Windmaster-Delta pumps 230 kV line
+Mountain View Ind Park 1-sline001,1.1,9741523,237,ETIWANDA,3350,89000000,Etiwanda-Rancho Vista Constraint
+North Kern 2,2.5,3932530.25,94,LERDO,637,760000000,Semitropic-Midway 115kV Line
+North Kern 1,2.5,4153907,94,LERDO,637,760000000,Semitropic-Midway 115kV Line
+Wheeler Ridge 2,5,10668476,143,PASTORIA,2000,100000000,Antelope-Neenach Constraint
+Bishop Ranch - BR 8-O,1,4959760,166,SAN RAMON,6034,417332000,Windmaster-Delta pumps 230 kV line
+Bishop Ranch - BR 15-AA,0.5,5898310.5,166,SAN RAMON,6034,417332000,Windmaster-Delta pumps 230 kV line
+Pivot Energy PPA 22,1.3,16073053,156,RECTOR,2000,4358000000,South of Magunden Constraint
+Blue Moon Farms,1,9170736,1,ALPAUGH,16891,940000000,Midway-Q2005 230kV Line
+Tipton 1 - (CA),4.2,17160214,1,ALPAUGH,16891,940000000,Midway-Q2005 230kV Line
+Visalia Solar,2.5,16055611,156,RECTOR,2000,4358000000,South of Magunden Constraint
+"Community Solar Utica 1, LLC",3,20445408,3,ARCO (PGE),16891,940000000,Midway-Q2005 230kV Line
+North Kern 3,5,5852510.5,56,FAMOSO,637,760000000,Semitropic-Midway 115kV Line
+Central San,1.8,5602610,106,MARTINEZ,978,271242991.8,Dumbarton-Newark 115 kV line
+Kern Del Oro,1.2,9755060,103,MAGUNDEN,2000,4358000000,South of Magunden Constraint
+Sutter Home Winery GIR,1.1,7579104.5,197,TULUCAY,861,0,Lakeville-Ignacio 230 kV line
+Sutter Home Winery TCC,1.1,25216460,193,TEMPLETON,16891,940000000,Midway-Q2005 230kV Line
+Avalon Dairy,3.1,2303241.5,181,SMYRNA,16891,940000000,Midway-Q2005 230kV Line
+Oaks HOA,1,32786636,260,LOCKEFORD,460,400000000,Bellota-Weber 230kV line
+Superior Almond Hulling,2.1,1660632.25,54,EXCELSIOR,0,0,Moss Landing-Las Aguilas 230 kV Line
+Lockheed Martin Palmdale Solar PV,20,17840592,308,VINCENT,1800,660000000,Pardee-Sylmar Constraint
+Dos Palos Cooperative Gin,1,26589968,110,MERCED (PGE),16891,940000000,Midway-Q2005 230kV Line
+Da Silva Dairy,1,6229493.5,242,VALLEY HOME,1255,1700000000,Kasson Jct-Heinz 115 kV line

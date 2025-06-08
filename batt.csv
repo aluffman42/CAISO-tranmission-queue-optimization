@@ -1,0 +1,103 @@
+﻿Name,Capacity,Storage Amount,Path Cost,Bus Index,Bus Name,Cap Increase,Price,Constraint Name
+Aramis I Solar Project,100,400,1369904.5,21,CAYETANO,6034,417332000,Windmaster-Delta pumps 230 kV line
+Buena Vista Energy LLC,100,400,8779328,82,KELSO,6034,417332000,Windmaster-Delta pumps 230 kV line
+Bishop Ranch - BR 8-P,0.5,1.1,4717762.5,166,SAN RAMON,6034,417332000,Windmaster-Delta pumps 230 kV line
+Bishop Ranch - BR 15-DD,0.5,1.1,5473951.5,166,SAN RAMON,6034,417332000,Windmaster-Delta pumps 230 kV line
+Bishop Ranch - BR 2600,1.1,2.1,4375475.5,166,SAN RAMON,6034,417332000,Windmaster-Delta pumps 230 kV line
+Scarlet II Hybrid,150,600,16003010,109,MENDOTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Scarlet Solar (CA),40,200,17403518,109,MENDOTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+EDPR CA Solar Park VI LLC (CA) Hybrid,40,40,13652995,109,MENDOTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+Foster Clean Power A,1.3,5.2,24187484,222,FAIRWAY (PGE),16891,940000000,Midway-Q2005 230kV Line
+Arrowleaf Solar and Storage,35,140,22274224,114,MIDWAY,8379,214062000,Gates-Panoche 230 kV #1 and #2 Lines
+Kingsley Solar Farm,74,296,3502300,75,IMPERIAL VALLEY,2823,782943728,East of Miguel constraint
+Big Rock Solar Farm,200,200,1971491.875,75,IMPERIAL VALLEY,2823,782943728,East of Miguel constraint
+Vikings Energy Farm,150,600,44970188,75,IMPERIAL VALLEY,2823,782943728,East of Miguel constraint
+Holtville,30,127,34412464,75,IMPERIAL VALLEY,2823,782943728,East of Miguel constraint
+Mordor ES1,25,100,52786420,77,INYOKERN,186,329000000,Control to Inyokern area constraint
+Amazon Bakersfield 1 Solar Project,1.6,5.9,4076389,83,KERN OIL,637,760000000,Semitropic-Midway 115kV Line
+Lakeview Battery Storage Facility,1.2,4.6,3343981.75,87,LAKEVIEW,16891,940000000,Midway-Q2005 230kV Line
+Bellefield 3 Solar and Battery Storage,150,600,30835808,210,WINDHUB,2500,612000000,Windhub Constraint
+Blackwells Corner Storage Facility,2,9,19759696,3,ARCO (PGE),16891,940000000,Midway-Q2005 230kV Line
+"Eland Solar & Storage Center, Phase 1 Hybrid",150,600,41131716,210,WINDHUB,2500,612000000,Windhub Constraint
+"Eland Solar & Storage Center, Phase 2 Hybrid",150,600,40478340,210,WINDHUB,2500,612000000,Windhub Constraint
+Bellefield 2 Solar & Energy Storage Farm,500,2000,22955270,210,WINDHUB,2500,612000000,Windhub Constraint
+Bellefield Solar and Energy Storage Farm,500,2000,21468924,210,WINDHUB,2500,612000000,Windhub Constraint
+Sagebrush Solar 2 ESS 40,40,160,3250561.25,210,WINDHUB,2500,612000000,Windhub Constraint
+"Golden Field Solar III, LLC",147,147,4369006.5,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Chaparral Springs,52,208,11446451,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+AVEP BESS,126,504,9254538,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Tumbleweed Energy Storage,50,200,9710293,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Rosamond South 1,117,472,5861248.5,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+"Northern Orchard Solar PV, LLC",92,368,17662650,87,LAKEVIEW,16891,940000000,Midway-Q2005 230kV Line
+Bear Canyon,13,14.7,21221258,61,GEYSERS 3,1766,700000000,Birds Landing-Contra Costa 230kV Line
+West Ford Flat,25,27.4,16038223,61,GEYSERS 3,1766,700000000,Birds Landing-Contra Costa 230kV Line
+Homestead Energy Storage LLC,14,15,8810102,141,PARDEE (SCE),2000,4358000000,South of Magunden Constraint
+Raceway Solar & Storage,80,320,14588441,283,WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+Cathode (Hinson) BESS,100,400,7676675.5,292,HINSON,800,28000000,Hinson - Del Amo Constraint
+Cald BESS,100,400,11938529,307,LAGUNA BELL,1058,11000000,Del Amo - Barre Area Constraint
+Humidor Storage I,300,1200,20341766,119,MOORPARK,2000,4358000000,South of Magunden Constraint
+Yorktown Battery Energy Storage Facility,3,9,7551329.5,112,MESA (SCE),1058,11000000,Del Amo - Barre Area Constraint
+Placerita ESS,80,320,16998812,141,PARDEE (SCE),2000,4358000000,South of Magunden Constraint
+Six Flags Magic Mountain,2,7.8,2967613.5,141,PARDEE (SCE),2000,4358000000,South of Magunden Constraint
+Lara 2 Hybrid,0.9,3.7,16528451,279,LOS BANOS,16891,940000000,Midway-Q2005 230kV Line
+Zeta Solar & Storage,75,300,28547528,279,LOS BANOS,16891,940000000,Midway-Q2005 230kV Line
+CA Moss Landing 3040 Hilltop Rd,1,2.5,11593343,241,GREEN VALLEY (PGE),712,380000000,Morganhill-Metcalf 115kV Line
+"San Jacinto Grid, LLC",65,40,24841788,256,EL CASCO,3350,89000000,Etiwanda-Rancho Vista Constraint
+Beaumont BESS,100,400,12722769,256,EL CASCO,3350,89000000,Etiwanda-Rancho Vista Constraint
+Desert Quartzite,150,150,6947123,29,COLORADO RIVER,5000,1386722862,Devers-Red Bluff Constraint
+Victory Pass,50,200,527043.6875,157,RED BLUFF,5000,1386722862,Devers-Red Bluff Constraint
+Sunlight Storage II,230,920,29781980,80,JULIAN HINDS,600,1182000000,Eagle Mountain Constraint
+"Ortega Grid, LLC",20,40,12368309,287,ALBERHILL,3350,89000000,Etiwanda-Rancho Vista Constraint
+Menifee Power Bank,230,920,1510856.25,261,VALLEY (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+Trestles Grid LLC,150,300,376459.7813,261,VALLEY (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+Hecate Energy Desert Storage 1 LLC,10,20,13234011,116,MIRAGE,5000,1386722862,Devers-Red Bluff Constraint
+CA Riverside 2356 Fleetwood Dr.,2,4,8501225,258,VISTA (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+Lycan Solar Project,400,800,24176362,157,RED BLUFF,5000,1386722862,Devers-Red Bluff Constraint
+"Chiquito Grid, LLC",80,320,25354440,261,VALLEY (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+Baldy Mesa Solar & Storage,75,300,5434358.5,263,ROADWAY,1206,334477554.3,Kramer to Victor Area Constraint
+Baldy Mesa 2_Silver Peak Hybrid,25,100,5306943.5,263,ROADWAY,1206,334477554.3,Kramer to Victor Area Constraint
+Bear Valley Battery Plant,5,5,69121232,252,SAN BERNARDINO,3350,89000000,Etiwanda-Rancho Vista Constraint
+CA Bloomington 2551 S Lilac Avenue Micro,1.5,3,7675339,258,VISTA (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+Aratina Solar Center 1 Hybrid,125,500,2751461.25,86,KRAMER,1206,334477554.3,Kramer to Victor Area Constraint
+Condor Energy Storage LLC,200,800,3786426,258,VISTA (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+"Lockhart ESS, LLC",45,180,6426066.5,167,SANDLOT,1206,334477554.3,Kramer to Victor Area Constraint
+Sienna Solar Farm,200,200,50134780,272,VICTOR,1221,338637722.9,Victor to Lugo Area Constraint
+Separator (Etiwanda) BESS,112.5,450,266197.25,311,RANCHO VISTA,0,0,SCE Metro Area Default Constraint
+Inland Empire Energy Storage,70,200,14568735,237,ETIWANDA,3350,89000000,Etiwanda-Rancho Vista Constraint
+Dark Sky Energy Center,7.1,7.1,86808160,130,OCOTILLO,2823,782943728,East of Miguel constraint
+EnerSmart Chula Vista Sub Station,3,6,1388909.875,133,OTAY,431,671054000,Miguel 69 kV constraint
+Grossmont-Cuyamaca-Cuyamaca Col. Solar &,1,1,10031574,50,EL CAJON,431,671054000,Miguel 69 kV constraint
+EnerSmart El Cajon BESS,3,3,6793860.5,50,EL CAJON,431,671054000,Miguel 69 kV constraint
+JVR Energy Park LLC,70,70,7855551,48,EAST COUNTY,2823,782943728,East of Miguel constraint
+Pala Gomez Creek BESS,10,10,874200.25,137,PALA,692,28300000,Ocean Ranch 69 kV constraint
+"Nighthawk Energy Storage, LLC",300,1200,1244862.375,153,POMERADO,936,259594519.8,Internal San Diego Area constraint
+Paradise Energy Storage,10,10,10264388,115,MIGUEL,431,671054000,Miguel 69 kV constraint
+Clairemont Energy Storage,10,10,7146575.5,81,KEARNEY,16891,940000000,Midway-Q2005 230kV Line
+Melrose BESS,10,10,11577947,288,SAN LUIS REY,2201,210600000,Talega 230 kV constraint
+Peregrine Energy Storage LLC,200,400,1685280.25,178,SILVERGATE,936,259594519.8,Internal San Diego Area constraint
+Amazon SAN3 Solar Project,2.4,8.9,3266198.5,134,OTAY MESA,4754,29971000,Silvergate - Bay Blvd 230 kV constraint
+CA Manteca 730 Spreckels Ave,1.5,3,4330228.5,104,MANTECA,1255,1700000000,Kasson Jct-Heinz 115 kV line
+Noosa Energy Storage LLC,99,500,384688.0313,235,RIPON,1255,1700000000,Kasson Jct-Heinz 115 kV line
+"Cascade Energy Storage, LLC",25,100,241997.5,233,WEBER,460,400000000,Bellota-Weber 230kV line
+Kola Energy Center,400,1600,1121767.5,273,TESLA,831,0,Newark-Newark Distribution 115 kV line
+Painter Energy Storage,10,20,46394244,64,GOLETA,2000,4358000000,South of Magunden Constraint
+Industrial Parkway Storage,9.8,37.6,12603017,111,MESA (N),16891,940000000,Midway-Q2005 230kV Line
+Hummingbird Energy Storage LLC,75,75,2302013.5,248,SANTA TERESA,300,0,Tesla-Bellota 230 kV line
+Shasta College PH2 Solar Project,0.5,1,20482312,79,JESSUP,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+Proxima,162,648,3233301.5,277,STANISLAUS RECOVERY,16891,940000000,Midway-Q2005 230kV Line
+Paulsell,15,60,1637299.75,277,STANISLAUS RECOVERY,16891,940000000,Midway-Q2005 230kV Line
+Anode 1 (Springville) BESS,112.5,450,372676.1563,184,SPRINGVILLE,2000,4358000000,South of Magunden Constraint
+Rexford Solar Farm,300,960,342236.1563,203,VESTAL,2000,4358000000,South of Magunden Constraint
+Bottleneck Energy Storage,80,320,752919.5625,203,VESTAL,2000,4358000000,South of Magunden Constraint
+"Sierra Energy Storage, LLC",10,40,15396126,245,MELONES (PGE),1255,1700000000,Kasson Jct-Heinz 115 kV line
+Black Walnut Energy Storage LLC,15,15,16258948,170,SANTA CLARA,2000,4358000000,South of Magunden Constraint
+Santa Paula Energy Storage LLC,30,30,16623179,170,SANTA CLARA,2000,4358000000,South of Magunden Constraint
+Gibson Solar Project - Hybrid,13,52,1882298.875,102,MADISON (PGE),1766,700000000,Birds Landing-Contra Costa 230kV Line
+"Mesquite Solar 4, LLC",10,47.7,181849184,251,BLYTHE,2823,782943728,East of Miguel constraint
+McFarland B Solar and Storage,150,600,143484080,251,BLYTHE,2823,782943728,East of Miguel constraint
+McFarland C,185,740,142304880,251,BLYTHE,2823,782943728,East of Miguel constraint
+Silver Peak 1,60,240,51257336,180,SLOAN CANYON,1285,356387775.6,GLW 230kV area constraint
+Arida Solar (Hybrid),370,1480,19517750,118,MOHAVE,6800,2165000000,Lugo - Victorville area constraint
+Silver State South Storage,200,800,3727678.75,154,PRIMM,6800,2165000000,Lugo - Victorville area constraint
+Bonanza Solar and Storage Project,195,780,16457488,205,VISTA (VEA),1367,379130030.5,VEA 138kV area constraint
+Yellow Pine II,53,212,11853042,196,CRAZY EYES,1285,356387775.6,GLW 230kV area constraint

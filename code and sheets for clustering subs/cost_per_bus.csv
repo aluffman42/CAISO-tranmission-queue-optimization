@@ -1,0 +1,396 @@
+Station,Inc,Cost,Constraint_original
+7TH STANDARD,16891,940000000,Midway-Q2005 230kV Line
+ALAMITOS,800,28000000,Hinson - Del Amo Constraint
+ALBERHILL,3350,89000000,Etiwanda-Rancho Vista Constraint
+ALPAUGH,16891,940000000,Midway-Q2005 230kV Line
+ALPINE,431,671054000,Miguel 69 kV constraint
+ALTAMONT,6034,417332000,Windmaster-Delta pumps 230 kV line
+ANTELOPE,2000,100000000,Antelope-Neenach Constraint
+ARCO (PGE),16891,940000000,Midway-Q2005 230kV Line
+ARCOGEN,800,28000000,Hinson - Del Amo Constraint
+ARTESIAN (SDGE),936,259594519.8,Internal San Diego Area constraint
+ASHLAN AVE,0,0,Moss Landing-Las Aguilas 230 kV Line
+ATLANTIC,574,0,Rio Oso-Brighton 230kV line
+AVENA,1255,1700000000,Kasson Jct-Heinz 115 kV line
+AVOCADO,936,259594519.8,Internal San Diego Area constraint
+BAHIA,1766,700000000,Birds Landing-Contra Costa 230kV Line
+BAILEY,2000,100000000,Antelope-Neenach Constraint
+BAKERSFIELD,16891,940000000,Midway-Q2005 230kV Line
+BALCH,0,0,Moss Landing-Las Aguilas 230 kV Line
+BARRE,0,0,SCE Metro Area Default Constraint
+BOULEVARD,4754,29971000,Silvergate - Bay Blvd 230 kV constraint
+BEATTTY,1367,379130030.5,VEA 138kV area constraint
+BELDEN,707,125000000,Rocklin-Pleaseant grove 115kV line
+BELLVUE,861,0,Lakeville-Ignacio 230 kV line
+BELLOTA,2019,0,Panoche- Mendota 115 kV line
+BIG CREEK 1,2000,4358000000,South of Magunden Constraint
+BIRDS LANDING,1766,700000000,Birds Landing-Contra Costa 230kV Line
+BLYTHE,2823,782943728,East of Miguel constraint
+BOGUE,109,9329000,Woodland- Davis 115kV line
+BORDEN,0,0,Moss Landing-Las Aguilas 230 kV Line
+BRENT,6034,417332000,Windmaster-Delta pumps 230 kV line
+BRIGHTON,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+BRUNSWICK,480,185000000,Bell-Placer 115kV Line
+BUENA VISTA,16891,940000000,Midway-Q2005 230kV Line
+CABRILLO (PGE),784,150000000,Midway 230/115kV TB #3
+CAL FLATS,16891,940000000,Midway-Q2005 230kV Line
+CAL WATER,637,760000000,Semitropic-Midway 115kV Line
+CALCITE,1046,239000000,Calcite to Lugo Area Constraint
+CALIENTE,16891,940000000,Midway-Q2005 230kV Line
+CALLENDER,16891,940000000,Midway-Q2005 230kV Line
+CALPELLA,50,50000000,Cortina-Eagle Rock 115 kV line
+CAMANCHE,3192,330000000,Oro Loma-El Nido 115kV Line
+CANTUA,0,0,Moss Landing-Las Aguilas 230 kV Line
+CAPISTRANO,556,103366000,Trabuco-Capistrano 138 kV constraint
+CARBERRY,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+CARIBOU,707,125000000,Rocklin-Pleaseant grove 115kV line
+CARRIZO PLAINS,784,150000000,Midway 230/115kV TB #3
+CASTRO VALLEY,6034,417332000,Windmaster-Delta pumps 230 kV line
+CAYETANO,6034,417332000,Windmaster-Delta pumps 230 kV line
+CENTER,1058,11000000,Del Amo - Barre Area Constraint
+CHARCA,637,760000000,Semitropic-Midway 115kV Line
+CHARLESTON PARK,1285,356387775.6,GLW 230kV area constraint
+CHEVMAIN,800,28000000,Hinson - Del Amo Constraint
+CHICARITA,936,259594519.8,Internal San Diego Area constraint
+CHINO,0,0,SCE Metro Area Default Constraint
+CHOWCHILLA,16891,940000000,Midway-Q2005 230kV Line
+CHRISTIE,6034,417332000,Windmaster-Delta pumps 230 kV line
+CIELO AZUL,3000,463000000,DCRT Constraint
+CLOVERDALE,1766,700000000,Birds Landing-Contra Costa 230kV Line
+COBURN,0,0,Moss Landing-Las Aguilas 230 kV Line
+COLGATE,707,125000000,Rocklin-Pleaseant grove 115kV line
+COLLINSVILLE,16891,940000000,Midway-Q2005 230kV Line
+COLORADO RIVER,5000,1386722862,Devers-Red Bluff Constraint
+COLUMBUS,637,760000000,Semitropic-Midway 115kV Line
+CONTRA COSTA POWER,6034,417332000,Windmaster-Delta pumps 230 kV line
+CONTROL,186,329000000,Control to Inyokern area constraint
+COOL WATER,1206,334477554.3,Kramer to Victor Area Constraint
+CORCORAN,0,0,Moss Landing-Las Aguilas 230 kV Line
+CORONA (PGE),861,0,Lakeville-Ignacio 230 kV line
+CORTINA,1766,700000000,Birds Landing-Contra Costa 230kV Line
+COTTLE,2019,0,Panoche- Mendota 115 kV line
+COTTONWOOD,26,180000000,Carberry-Round Mountain 230kV Line
+COYOTE,300,0,Tesla-Bellota 230 kV line
+CREELMAN,431,671054000,Miguel 69 kV constraint
+CROW CREEK SW STA,74,400000000,Salado-Crow Creek Sw Sta 60 kV line
+CURTIS,1255,1700000000,Kasson Jct-Heinz 115 kV line
+DAIRYLAND,358,125000000,Merced 115/70kV TB#2
+DAVIS (PGE),109,9329000,Woodland- Davis 115kV line
+DEL AMO,800,28000000,Hinson - Del Amo Constraint
+DELANEY,3000,463000000,DCRT Constraint
+DELEVAN,1766,700000000,Birds Landing-Contra Costa 230kV Line
+DELTA PUMPS,6034,417332000,Windmaster-Delta pumps 230 kV line
+DESERT VIEW,1285,356387775.6,GLW 230kV area constraint
+DEVERS,3350,89000000,Etiwanda-Rancho Vista Constraint
+DIABLO CANYON,4125,830000000,Diablo–Gates 500 kV line
+DIXON LANDING,300,0,Tesla-Bellota 230 kV line
+DONNELLS-CURTIS,1255,1700000000,Kasson Jct-Heinz 115 kV line
+DOS AMIGOS,0,0,Moss Landing-Las Aguilas 230 kV Line
+DRUM,480,185000000,Bell-Placer 115kV Line
+DUMBARTON,978,271242991.8,Dumbarton-Newark 115 kV line
+EAGLE MT,600,1182000000,Eagle Mountain Constraint
+EAGLE ROCK (PGE),1766,700000000,Birds Landing-Contra Costa 230kV Line
+EAST NICOLAUS,109,9329000,Woodland- Davis 115kV line
+EASTSHORE,548,0,Eastshore-San Mateo 230 kV line
+EAST COUNTY,2823,782943728,East of Miguel constraint
+EDES,290,125000000,Grant - Eastshore #2 line 115 kV
+EIGHT MILE,574,0,Rio Oso-Brighton 230kV line
+EL CAJON,431,671054000,Miguel 69 kV constraint
+EL CASCO,3350,89000000,Etiwanda-Rancho Vista Constraint
+EL NIDO (SCE),800,28000000,Hinson - Del Amo Constraint
+EL PATIO,712,380000000,Morganhill-Metcalf 115kV Line
+EL SEGUNDO,800,28000000,Hinson - Del Amo Constraint
+ELDORADO,5000,1386722862,Devers-Red Bluff Constraint
+ELK HILLS,16891,940000000,Midway-Q2005 230kV Line
+ELLIOTT,936,259594519.8,Internal San Diego Area constraint
+ELLIS (SCE),0,0,SCE Metro Area Default Constraint
+ENCINA,746,206899051,Encina - San Luis Rey 230 kV constraint
+ESCONDIDO,936,259594519.8,Internal San Diego Area constraint
+ETIWANDA,3350,89000000,Etiwanda-Rancho Vista Constraint
+EVERGREEN (PGE),712,380000000,Morganhill-Metcalf 115kV Line
+EXCELSIOR,0,0,Moss Landing-Las Aguilas 230 kV Line
+EXCHEQUER,0,0,Moss Landing-Las Aguilas 230 kV Line
+FAIRWAY (PGE),16891,940000000,Midway-Q2005 230kV Line
+FAMOSO,637,760000000,Semitropic-Midway 115kV Line
+FIBERBOARD,131,185000000,Contra Costa #1 115kV Line
+FIG GARDEN,0,0,Moss Landing-Las Aguilas 230 kV Line
+STANISLAUS RECOVERY,16891,940000000,Midway-Q2005 230kV Line
+FMC,712,380000000,Morganhill-Metcalf 115kV Line
+FROGTOWN,1255,1700000000,Kasson Jct-Heinz 115 kV line
+FULTON (PGE),1766,700000000,Birds Landing-Contra Costa 230kV Line
+GAMEBIRD,1285,356387775.6,GLW 230kV area constraint
+GANSO,16891,940000000,Midway-Q2005 230kV Line
+GATES,16891,940000000,Midway-Q2005 230kV Line
+GEYSERS TAP 1,1766,700000000,Birds Landing-Contra Costa 230kV Line
+GEYSERS 3,1766,700000000,Birds Landing-Contra Costa 230kV Line
+GLENN (PGE),1766,700000000,Birds Landing-Contra Costa 230kV Line
+GOLD HILL,707,125000000,Rocklin-Pleaseant grove 115kV line
+GOLETA,2000,4358000000,South of Magunden Constraint
+GOODRICH,0,0,SCE Metro Area Default Constraint
+GOOSE LAKE,16891,940000000,Midway-Q2005 230kV Line
+GOULD,0,0,SCE Metro Area Default Constraint
+GRANT,6034,417332000,Windmaster-Delta pumps 230 kV line
+GREEN VALLEY (PGE),712,380000000,Morganhill-Metcalf 115kV Line
+GREGG,0,0,Moss Landing-Las Aguilas 230 kV Line
+GRIMMWAY-MALAGA,637,760000000,Semitropic-Midway 115kV Line
+GWF 2,0,0,Moss Landing-Las Aguilas 230 kV Line
+HARBORGEN,800,28000000,Hinson - Del Amo Constraint
+HASSAYAMPA,2823,782943728,East of Miguel constraint
+HELM,0,0,Moss Landing-Las Aguilas 230 kV Line
+HENRIETTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+HERNDON,0,0,Moss Landing-Las Aguilas 230 kV Line
+HICKS,300,0,Tesla-Bellota 230 kV line
+HIGGINS,574,0,Rio Oso-Brighton 230kV line
+HILLTOP,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+MADELINE,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+LEAVITT,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+HINSON,800,28000000,Hinson - Del Amo Constraint
+HOLLISTER,712,380000000,Morganhill-Metcalf 115kV Line
+HOMESTAKE,1766,700000000,Birds Landing-Contra Costa 230kV Line
+HONCUT,707,125000000,Rocklin-Pleaseant grove 115kV line
+HOODOO WASH,2823,782943728,East of Miguel constraint
+HOPLAND,50,50000000,Cortina-Eagle Rock 115 kV line
+HUNTINGTON BEACH,0,0,SCE Metro Area Default Constraint
+IGNACIO,50,50000000,Cortina-Eagle Rock 115 kV line
+IMPERIAL VALLEY,2823,782943728,East of Miguel constraint
+INNOVATION,1285,356387775.6,GLW 230kV area constraint
+INYOKERN,186,329000000,Control to Inyokern area constraint
+IVANPAH,6800,2165000000,Lugo - Victorville area constraint
+JACKASS FLATS,1367,379130030.5,VEA 138kV area constraint
+JACKSON,0,0,Jacksson-Waukena_x0002_Corcoran 115kV line
+JESSUP,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+JOHANNA,0,0,SCE Metro Area Default Constraint
+JULIAN HINDS,600,1182000000,Eagle Mountain Constraint
+KASSON,70,0,Tesla-Salado 115 kV line
+KEARNEY,16891,940000000,Midway-Q2005 230kV Line
+KELSO,6034,417332000,Windmaster-Delta pumps 230 kV line
+KERN OIL,637,760000000,Semitropic-Midway 115kV Line
+KERN,16891,940000000,Midway-Q2005 230kV Line
+KERNRIDGE,784,150000000,Midway 230/115kV TB #3
+KIRKER,978,271242991.8,Dumbarton-Newark 115 kV line
+KNIGHTS LANDING,109,9329000,Woodland- Davis 115kV line
+KRAMER,1206,334477554.3,Kramer to Victor Area Constraint
+ROADWAY,1206,334477554.3,Kramer to Victor Area Constraint
+LA CIENEGA,800,28000000,Hinson - Del Amo Constraint
+LA FRESA,800,28000000,Hinson - Del Amo Constraint
+LAGUNA BELL,1058,11000000,Del Amo - Barre Area Constraint
+LAKEVIEW,16891,940000000,Midway-Q2005 230kV Line
+LAKEVILLE,861,0,Lakeville-Ignacio 230 kV line
+LAMBIE,1766,700000000,Birds Landing-Contra Costa 230kV Line
+LAMMERS,1255,1700000000,Kasson Jct-Heinz 115 kV line
+LAMONT,16891,940000000,Midway-Q2005 230kV Line
+LAS AGUILAS,0,0,Moss Landing-Las Aguilas 230 kV Line
+LATHROP,1367,379130030.5,VEA 138kV area constraint
+LE GRAND,0,0,Moss Landing-Las Aguilas 230 kV Line
+LERDO,637,760000000,Semitropic-Midway 115kV Line
+LEWIS,0,0,SCE Metro Area Default Constraint
+LIGHTPIPE,800,28000000,Hinson - Del Amo Constraint
+LINCOLN (PGE),109,9329000,Woodland- Davis 115kV line
+LIVE OAK,637,760000000,Semitropic-Midway 115kV Line
+LLAGAS,712,380000000,Morganhill-Metcalf 115kV Line
+LOCKEFORD,460,400000000,Bellota-Weber 230kV line
+LOGAN CREEK,1766,700000000,Birds Landing-Contra Costa 230kV Line
+LONE TREE,6034,417332000,Windmaster-Delta pumps 230 kV line
+LOS BANOS,16891,940000000,Midway-Q2005 230kV Line
+LOS ESTEROS,348,96515911.21,Los Esteros-Silicon Valley 230 kV
+LAS POSITAS,6034,417332000,Windmaster-Delta pumps 230 kV line
+LOVELAND,431,671054000,Miguel 69 kV constraint
+LUGO,0,0,SCE Metro Area Default Constraint
+LUGO,1178,326711906.3,Lugo Transformer Area Constraint
+COTTONWOOD (SCE),1046,239000000,Calcite to Lugo Area Constraint
+MADISON (PGE),1766,700000000,Birds Landing-Contra Costa 230kV Line
+MAGUNDEN,2000,4358000000,South of Magunden Constraint
+MANNING,16891,940000000,Midway-Q2005 230kV Line
+MANTECA,1255,1700000000,Kasson Jct-Heinz 115 kV line
+MARGARITA,556,103366000,Trabuco-Capistrano 138 kV constraint
+MARIPOSA (PGE),6034,417332000,Windmaster-Delta pumps 230 kV line
+MARTIN,653,0,Sobrante-Moraga 230 kV line
+MARTINEZ,978,271242991.8,Dumbarton-Newark 115 kV line
+MC MULLIN,0,0,Moss Landing-Las Aguilas 230 kV Line
+MCCALL,16891,940000000,Midway-Q2005 230kV Line
+MCCULLOUGH,6800,2165000000,Lugo - Victorville area constraint
+MEAD,5000,1386722862,Devers-Red Bluff Constraint
+MELONES (PGE),1255,1700000000,Kasson Jct-Heinz 115 kV line
+MENDOCINO,1766,700000000,Birds Landing-Contra Costa 230kV Line
+MENDOTA,0,0,Moss Landing-Las Aguilas 230 kV Line
+MERCED (PGE),16891,940000000,Midway-Q2005 230kV Line
+MERCURY,1367,379130030.5,VEA 138kV area constraint
+MESA (N),16891,940000000,Midway-Q2005 230kV Line
+MESA (SCE),1058,11000000,Del Amo - Barre Area Constraint
+METCALF 1,712,380000000,Morganhill-Metcalf 115kV Line
+MIDWAY,8379,214062000,Gates-Panoche 230 kV #1 and #2 Lines
+MIGUEL,431,671054000,Miguel 69 kV constraint
+MILLER (PGE),1255,1700000000,Kasson Jct-Heinz 115 kV line
+MIRA LOMA (SCE),0,0,SCE Metro Area Default Constraint
+MIRAGE,5000,1386722862,Devers-Red Bluff Constraint
+MISSION,936,259594519.8,Internal San Diego Area constraint
+MI-WUK,1255,1700000000,Kasson Jct-Heinz 115 kV line
+MOHAVE,6800,2165000000,Lugo - Victorville area constraint
+MONROE,861,0,Lakeville-Ignacio 230 kV line
+MONTA VISTA,653,0,Sobrante-Moraga 230 kV line
+MONTICELLO,548,0,Eastshore-San Mateo 230 kV line
+MOORPARK,2000,4358000000,South of Magunden Constraint
+MORAGA,6034,417332000,Windmaster-Delta pumps 230 kV line
+MORGAN HILL,712,380000000,Morganhill-Metcalf 115kV Line
+MORRO BAY,16891,940000000,Midway-Q2005 230kV Line
+MOSS LANDING,16891,940000000,Midway-Q2005 230kV Line
+MT POSO,16891,940000000,Midway-Q2005 230kV Line
+MUSTANG,0,0,Moss Landing-Las Aguilas 230 kV Line
+NEW MELONES,2019,0,Panoche- Mendota 115 kV line
+NEWARK,653,0,Sobrante-Moraga 230 kV line
+NEWHALL,358,125000000,Merced 115/70kV TB#2
+NORCO (PGE),784,150000000,Midway 230/115kV TB #3
+NORTH CITY WEST,936,259594519.8,Internal San Diego Area constraint
+NORTH DUBLIN,6034,417332000,Windmaster-Delta pumps 230 kV line
+NORTH GILA,2823,782943728,East of Miguel constraint
+OAKLAND C,6034,417332000,Windmaster-Delta pumps 230 kV line
+OAKLAND I,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+OCEANO,784,150000000,Midway 230/115kV TB #3
+OCOTILLO,2823,782943728,East of Miguel constraint
+OLD TOWN,746,206899051,Encina - San Luis Rey 230 kV constraint
+OLINDA,0,0,SCE Metro Area Default Constraint
+OLIVE,16891,940000000,Midway-Q2005 230kV Line
+OLIVEHURST,109,9329000,Woodland- Davis 115kV line
+ORMOND BEACH,2000,4358000000,South of Magunden Constraint
+OTAY,431,671054000,Miguel 69 kV constraint
+OTAY MESA,4754,29971000,Silvergate - Bay Blvd 230 kV constraint
+PADRE FLATS,0,0,Moss Landing-Las Aguilas 230 kV Line
+PAHRUMP,1367,379130030.5,VEA 138kV area constraint
+PALA,692,28300000,Ocean Ranch 69 kV constraint
+PALERMO,707,125000000,Rocklin-Pleaseant grove 115kV line
+PALO VERDE,5000,1386722862,Devers-Red Bluff Constraint
+PALOMAR,936,259594519.8,Internal San Diego Area constraint
+PANOCHE,16891,940000000,Midway-Q2005 230kV Line
+PARDEE (SCE),2000,4358000000,South of Magunden Constraint
+PARKWAY,6034,417332000,Windmaster-Delta pumps 230 kV line
+PASTORIA,2000,100000000,Antelope-Neenach Constraint
+PADUA,0,0,SCE Metro Area Default Constraint
+PEABODY,1766,700000000,Birds Landing-Contra Costa 230kV Line
+PEASE,707,125000000,Rocklin-Pleaseant grove 115kV line
+PENASQUITOS,746,206899051,Encina - San Luis Rey 230 kV constraint
+PENNGROVE,861,0,Lakeville-Ignacio 230 kV line
+PEORIA,1255,1700000000,Kasson Jct-Heinz 115 kV line
+PIERCY,712,380000000,Morganhill-Metcalf 115kV Line
+PINE FLAT,0,0,Moss Landing-Las Aguilas 230 kV Line
+PISGAH,1046,239000000,Calcite to Lugo Area Constraint
+PIT 1,26,180000000,Carberry-Round Mountain 230kV Line
+ROUND MOUNTAIN,26,180000000,Carberry-Round Mountain 230kV Line
+PIT 4,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+PITTSBURG,6034,417332000,Windmaster-Delta pumps 230 kV line
+PLACERVILLE,574,0,Rio Oso-Brighton 230kV line
+PLEASANT GROVE,574,0,Rio Oso-Brighton 230kV line
+POE,707,125000000,Rocklin-Pleaseant grove 115kV line
+POINT LOMA,936,259594519.8,Internal San Diego Area constraint
+POMERADO,936,259594519.8,Internal San Diego Area constraint
+POSO MOUNTAIN,16891,940000000,Midway-Q2005 230kV Line
+PRIMM,6800,2165000000,Lugo - Victorville area constraint
+PUTAH CREEK,1766,700000000,Birds Landing-Contra Costa 230kV Line
+QUINTO,4931,0,Los Banos 500/230kV TB
+RACETRACK,1255,1700000000,Kasson Jct-Heinz 115 kV line
+RANCHO MISSION VIEJO,556,103366000,Trabuco-Capistrano 138 kV constraint
+CAMANCHE,3192,330000000,Oro Loma-El Nido 115kV Line
+RANCHO VISTA,0,0,SCE Metro Area Default Constraint
+RANDSBURG,1206,334477554.3,Kramer to Victor Area Constraint
+RECTOR,2000,4358000000,South of Magunden Constraint
+RED BLUFF,5000,1386722862,Devers-Red Bluff Constraint
+REDONDO,800,28000000,Hinson - Del Amo Constraint
+RENFRO,16891,940000000,Midway-Q2005 230kV Line
+RICHMOND Q,6034,417332000,Windmaster-Delta pumps 230 kV line
+RINCON (PGE),50,50000000,Cortina-Eagle Rock 115 kV line
+RIO BRAVO,16891,940000000,Midway-Q2005 230kV Line
+RIO HONDO,1058,11000000,Del Amo - Barre Area Constraint
+RIO OSO,109,9329000,Woodland- Davis 115kV line
+RIPON,1255,1700000000,Kasson Jct-Heinz 115 kV line
+RIVERBANK,1255,1700000000,Kasson Jct-Heinz 115 kV line
+ROADWAY,1206,334477554.3,Kramer to Victor Area Constraint
+ROSSMOOR,6034,417332000,Windmaster-Delta pumps 230 kV line
+ROUND MOUNTAIN,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+SALADO,1255,1700000000,Kasson Jct-Heinz 115 kV line
+SALT CREEK,431,671054000,Miguel 69 kV constraint
+SAN BERNARDINO,3350,89000000,Etiwanda-Rancho Vista Constraint
+SAN JOSE STA. B,712,380000000,Morganhill-Metcalf 115kV Line
+SAN LEANDRO U,290,125000000,Grant - Eastshore #2 line 115 kV
+SAN LUIS OBISPO,784,150000000,Midway 230/115kV TB #3
+SAN LUIS REY,2201,210600000,Talega 230 kV constraint
+SAN ONOFRE,556,103366000,Trabuco-Capistrano 138 kV constraint
+SAN PABLO,290,125000000,Grant - Eastshore #2 line 115 kV
+SAN RAMON,6034,417332000,Windmaster-Delta pumps 230 kV line
+SANDLOT,1206,334477554.3,Kramer to Victor Area Constraint
+SANDY VALLEY,1285,356387775.6,GLW 230kV area constraint
+SANGER,16891,940000000,Midway-Q2005 230kV Line
+SANTA CLARA,2000,4358000000,South of Magunden Constraint
+SANTA ROSA,861,0,Lakeville-Ignacio 230 kV line
+SANTA TERESA,300,0,Tesla-Bellota 230 kV line
+SANTEE (SDGE),936,259594519.8,Internal San Diego Area constraint
+SANTIAGO,0,0,SCE Metro Area Default Constraint
+SARATOGA,653,0,Sobrante-Moraga 230 kV line
+SAUGUS,6800,2165000000,Lugo - Victorville area constraint
+SCHINDLER,0,0,Moss Landing-Las Aguilas 230 kV Line
+SCHULTE,707,125000000,Rocklin-Pleaseant grove 115kV line
+SEMITROPIC,16891,940000000,Midway-Q2005 230kV Line
+SERRANO,0,0,SCE Metro Area Default Constraint
+SHADOWRIDGE,936,259594519.8,Internal San Diego Area constraint
+SHAFTER,16891,940000000,Midway-Q2005 230kV Line
+SHILOAH II,1766,700000000,Birds Landing-Contra Costa 230kV Line
+SILVERADO,50,50000000,Cortina-Eagle Rock 115 kV line
+SILVERGATE,936,259594519.8,Internal San Diego Area constraint
+SISQUOC,784,150000000,Midway 230/115kV TB #3
+SLOAN CANYON,1285,356387775.6,GLW 230kV area constraint
+SMYRNA,16891,940000000,Midway-Q2005 230kV Line
+SOBRANTE,6034,417332000,Windmaster-Delta pumps 230 kV line
+SOLAR,16891,940000000,Midway-Q2005 230kV Line
+SPRINGVILLE,2000,4358000000,South of Magunden Constraint
+STAGG,4931,0,Los Banos 500/230kV TB
+STOCKDALE,16891,940000000,Midway-Q2005 230kV Line
+STOREY,16891,940000000,Midway-Q2005 230kV Line
+SUNCREST,700,100000000,Chicarita 138 kV constraint
+CRESTWOOD,2823,782943728,East of Miguel constraint
+SURF,16891,940000000,Midway-Q2005 230kV Line
+SYCAMORE CANYON,700,100000000,Chicarita 138 kV constraint
+SYLMAR EAST,6800,2165000000,Lugo - Victorville area constraint
+TABLE MT.,8645,2851848000,Vaca Dixon-Tesla 500kV Line
+TAFT,16891,940000000,Midway-Q2005 230kV Line
+TALEGA,556,103366000,Trabuco-Capistrano 138 kV constraint
+TASSAJARA,6034,417332000,Windmaster-Delta pumps 230 kV line
+TEMBLOR,784,150000000,Midway 230/115kV TB #3
+TEMPLETON,16891,940000000,Midway-Q2005 230kV Line
+TESLA,831,0,Newark-Newark Distribution 115 kV line
+TEVIS,16891,940000000,Midway-Q2005 230kV Line
+THOUSANDAIRE,1285,356387775.6,GLW 230kV area constraint
+TORTILLA,1206,334477554.3,Kramer to Victor Area Constraint
+TRABUCO,556,103366000,Trabuco-Capistrano 138 kV constraint
+TRACY (PGE),16891,940000000,Midway-Q2005 230kV Line
+TRANQUILITY,0,0,Moss Landing-Las Aguilas 230 kV Line
+CRAZY EYES,1285,356387775.6,GLW 230kV area constraint
+TULUCAY,861,0,Lakeville-Ignacio 230 kV line
+TUPMAN,16891,940000000,Midway-Q2005 230kV Line
+UKIAH,50,50000000,Cortina-Eagle Rock 115 kV line
+VACA-DIXON,16891,940000000,Midway-Q2005 230kV Line
+VALLEY (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+VALLEY (VEA),1367,379130030.5,VEA 138kV area constraint
+VALLEY HOME,1255,1700000000,Kasson Jct-Heinz 115 kV line
+VALLEY SWITCH,1367,379130030.5,VEA 138kV area constraint
+VASONA,6034,417332000,Windmaster-Delta pumps 230 kV line
+VESTAL,2000,4358000000,South of Magunden Constraint
+VICTOR,1221,338637722.9,Victor to Lugo Area Constraint
+VIERRA,1255,1700000000,Kasson Jct-Heinz 115 kV line
+VILLA PARK,0,0,SCE Metro Area Default Constraint
+VINCENT,1800,660000000,Pardee-Sylmar Constraint
+VINEYARD,6034,417332000,Windmaster-Delta pumps 230 kV line
+VISTA (SCE),3350,89000000,Etiwanda-Rancho Vista Constraint
+VISTA (VEA),1367,379130030.5,VEA 138kV area constraint
+WALNUT,1058,11000000,Del Amo - Barre Area Constraint
+WARNE,2000,4358000000,South of Magunden Constraint
+WARNERVILLE,2019,0,Panoche- Mendota 115 kV line
+WAUKENA,0,0,Jacksson-Waukena_x0002_Corcoran 115kV line
+WEBER,460,400000000,Bellota-Weber 230kV line
+WEST FRESNO,16891,940000000,Midway-Q2005 230kV Line
+WESTLEY,16891,940000000,Midway-Q2005 230kV Line
+WEST PARK,637,760000000,Semitropic-Midway 115kV Line
+WHEELER RIDGE,16891,940000000,Midway-Q2005 230kV Line
+WHIRLWIND,1500,13200000,Antelope-Vincent Constraint
+WILSON,16891,940000000,Midway-Q2005 230kV Line
+WIND GAP,16891,940000000,Midway-Q2005 230kV Line
+WINDHUB,2500,612000000,Windhub Constraint
+WOODLAND (PGE),109,9329000,Woodland- Davis 115kV line
+WYANDOTTE,707,125000000,Rocklin-Pleaseant grove 115kV line

@@ -1,0 +1,12 @@
+﻿Name,Capacity,Path Cost,Bus Index,Bus Name,Cap Increase,Price,Constraint Name
+Santa Rita Jail Fuel Cell (Now F0002),1.4,5890989,126,NORTH DUBLIN,6034,417332000,Windmaster-Delta pumps 230 kV line
+"CEFF II Tehachapi Property, LLC (formerly SunSelect 1)",6.86,39889820,67,GRIMMWAY-MALAGA,637,760000000,Semitropic-Midway 115kV Line
+Kaiser Permanente,2.2,6056454,312,VILLA PARK,0,0,SCE Metro Area Default Constraint
+AT&T Services Inc,1.25,5288724.5,301,LEWIS,0,0,SCE Metro Area Default Constraint
+Procter and Gamble Oxnard I (duplicate of G0468),19.9,14390706,170,SANTA CLARA,2000,4358000000,South of Magunden Constraint
+Santa Rita Jail Fuel Cell,1.4,6251476,126,NORTH DUBLIN,6034,417332000,Windmaster-Delta pumps 230 kV line
+Acid (CAISO),110.6,8927167,206,WEST FRESNO,16891,940000000,Midway-Q2005 230kV Line
+Berry Cogen Pan Fee,5.7,12220518,90,LAMONT,16891,940000000,Midway-Q2005 230kV Line
+Pio Pico Energy Center,336,1494528.875,134,OTAY MESA,4754,29971000,Silvergate - Bay Blvd 230 kV constraint
+Alamitos Energy Center,693,382647.9688,286,ALAMITOS,800,28000000,Hinson - Del Amo Constraint
+Stanton Energy Reliability Center,121,904493.4375,309,BARRE,0,0,SCE Metro Area Default Constraint

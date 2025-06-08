@@ -1,0 +1,21 @@
+﻿Name,Capacity,Path Cost,Bus Index,Bus Name,Cap Increase,Price,Constraint Name
+Tehachapi Wind Resource II,15.5,13926117,210,WINDHUB,2500,612000000,Windhub Constraint
+Rooney Ranch,21,11821175,273,TESLA,831,0,Newark-Newark Distribution 115 kV line
+Sand Hill A,13.5,6726734,273,TESLA,831,0,Newark-Newark Distribution 115 kV line
+Sand Hill B,17,6852020,82,KELSO,6034,417332000,Windmaster-Delta pumps 230 kV line
+Sand Hill C,80,4499372.5,82,KELSO,6034,417332000,Windmaster-Delta pumps 230 kV line
+Solano Wind,108,6727413,215,BIRDS LANDING,1766,700000000,Birds Landing-Contra Costa 230kV Line
+Painted Hills Wind Park,46.8,5352832,266,DEVERS,3350,89000000,Etiwanda-Rancho Vista Constraint
+Sky River Wind Energy Center,60.2,47728004,210,WINDHUB,2500,612000000,Windhub Constraint
+85 A,21.3,13016411,210,WINDHUB,2500,612000000,Windhub Constraint
+85 B,25.2,14888641,210,WINDHUB,2500,612000000,Windhub Constraint
+Mountain View I & II,70.9,3853076.75,266,DEVERS,3350,89000000,Etiwanda-Rancho Vista Constraint
+Strauss Wind Farm,95.3,59764556,179,SISQUOC,784,150000000,Midway 230/115kV TB #3
+Foundation Dole Fresh Vegetables,2.8,30910820,28,COBURN,0,0,Moss Landing-Las Aguilas 230 kV Line
+Point Wind,64.5,14149214,210,WINDHUB,2500,612000000,Windhub Constraint
+Oasis Alta,14.4,4552029,210,WINDHUB,2500,612000000,Windhub Constraint
+Coachella Hills Wind,61.2,5353062,266,DEVERS,3350,89000000,Etiwanda-Rancho Vista Constraint
+Summit Winds,47.5,10838717,21,CAYETANO,6034,417332000,Windmaster-Delta pumps 230 kV line
+AM Wind Repower LLC,27,12375453,266,DEVERS,3350,89000000,Etiwanda-Rancho Vista Constraint
+Mesa Wind Repower,30,15500153,266,DEVERS,3350,89000000,Etiwanda-Rancho Vista Constraint
+CalPorlland Company Mojave Wind,23.5,8383779,210,WINDHUB,2500,612000000,Windhub Constraint
