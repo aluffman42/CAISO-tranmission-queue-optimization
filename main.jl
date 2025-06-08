@@ -1,8 +1,6 @@
 using CSV, JuMP, Gurobi, DataFrames, Plots, FileIO
 ### Import the data
 
-#Testing update
-
 ## solar and wind capacity factor
 
 load_288 = "191_data_288_from_kmeansv2.csv"
@@ -68,6 +66,7 @@ emissions_cost = 150        # $/ton
 gas_emissions = 0.20196     # ton/MWh
 efficiency_batt = .95
 inital_soc = 0.5
+final_soc = 0.5
 
 Nbuses = length(bus_idx)
 Nsolar = length(solar_buses)
@@ -92,17 +91,21 @@ m = Model(Gurobi.Optimizer)
 # Available output (as before)
 @expression(m, solar_available[t=1:steps], sum(solar_build[i] * solar_capacity[i] * solar_cf[t] for i in 1:Nsolar))
 @expression(m, wind_available[t=1:steps],  sum(wind_build[i] * wind_capacity[i] * wind_cf[t]  for i in 1:Nwind))
+@expression(m, gas_available[t=1:steps], sum(gas_build[i] * gas_capacity[i] for i in 1:Ngas))
 
 ##availalable power and store avail for batteries
 @expression(m, batt_pwr_available, sum(batt_build[i] * batt_capacity[i] for i in 1:Nbatt))
 @expression(m, batt_store_available, sum(batt_build[i] * batt_storage[i] for i in 1:Nbatt))
 
-# New variables for dispatched output (can be curtailed)
+# New variables for dispatched output (renewables can be curtailed)
 @variable(m, solar_dispatch[1:steps] >= 0)
 @variable(m, wind_dispatch[1:steps]  >= 0)
+@variable(m, gas_dispatch[1:steps] >= 0)
 
-# First week: storage starts from initial_storage
+# First week: storage starts from initial_soc
 @constraint(m, InStorage[1] == batt_store_available * inital_soc)
+# Last week: storage starts from final_soc TODO adding this makes the model weird 
+# @constraint(m, InStorage[steps] == batt_store_available * final_soc)
 
 # Storage bounds for all t
 for t = 1:steps
@@ -117,35 +120,25 @@ for t = 2:steps
     @constraint(m, InStorage[t] == InStorage[t-1] + StoreIn[t] - StoreOut[t])
 end
 
-# # Storage bounds
-for t = 1:steps
-     @constraint(m, InStorage[t] <= batt_store_available)
-end
-
 # Dispatched cannot exceed available
 @constraint(m, [t=1:steps], solar_dispatch[t] <= solar_available[t])
 @constraint(m, [t=1:steps], wind_dispatch[t]  <= wind_available[t])
+@constraint(m, [t=1:steps], gas_dispatch[t]  <= gas_available[t])
 
-# Gas output as the residual
-@expression(m, gas_output[t=1:steps], load_increase[t] - solar_dispatch[t] - wind_dispatch[t] + StoreIn[t] - (StoreOut[t]) * efficiency_batt)
-
-# Gas output cannot exceed available capacity and must be non-negative
-@constraint(m, [t=1:steps], gas_output[t] <= sum(gas_build[i] * gas_capacity[i] for i in 1:Ngas))
-@constraint(m, [t=1:steps], gas_output[t] >= 0)
 
 # Power balance: supply >= demand
-@constraint(m, [t=1:steps], load_increase[t] <= solar_dispatch[t] + wind_dispatch[t] + gas_output[t] - StoreIn[t] + (StoreOut[t]) * efficiency_batt)
+@constraint(m, [t=1:steps], load_increase[t] <= solar_dispatch[t] + wind_dispatch[t] + gas_dispatch[t] - StoreIn[t] + (StoreOut[t]) * efficiency_batt)
 
 # For each time step, batteries can only charge from excess generation
-@constraint(m, [t=1:steps], StoreIn[t] <= solar_dispatch[t] + wind_dispatch[t] + gas_output[t] - load_increase[t] + StoreOut[t] * efficiency_batt)
+@constraint(m, [t=1:steps], StoreIn[t] <= solar_dispatch[t] + wind_dispatch[t] + gas_dispatch[t] - load_increase[t] + StoreOut[t] * efficiency_batt)
 
-# Curtailment, postive so that it does not increase negative curtailment
+# Curtailment; postive so that model does not increase negative curtailment
 @expression(m, curtailment[t=1:steps], solar_available[t] + wind_available[t] - solar_dispatch[t] - wind_dispatch[t] - StoreIn[t])
 @constraint(m, [t=1:steps], curtailment[t] >= 0)
 @expression(m, total_curtailment_cost, sum(curtailment[t] * curtail_cost for t in 1:steps))
 
 # Emissions
-@expression(m, emissions,   sum(gas_output[t] * gas_emissions for t in 1:steps))
+@expression(m, emissions,   sum(gas_dispatch[t] * gas_emissions for t in 1:steps))
 
 # Objective: total cost = project costs + curtailment + emissions
 @objective(m, Min,
@@ -198,7 +191,7 @@ println("Total Emissions (tons CO₂): ", value(emissions))
 println("Total Curtailment (MWh): ", sum(value.(curtailment)))
 
 total_load = sum(value.(load_increase))
-total_generation = sum(value.(solar_dispatch)) + sum(value.(wind_dispatch)) + sum(value.(gas_output)) + sum(value.(StoreOut)) * efficiency_batt - sum(value.(StoreIn))
+total_generation = sum(value.(solar_dispatch)) + sum(value.(wind_dispatch)) + sum(value.(gas_dispatch)) + sum(value.(StoreOut)) * efficiency_batt - sum(value.(StoreIn))
 println("Total Load (MWh): ", total_load)
 println("Total Generation (MWh): ", total_generation)
 
@@ -206,7 +199,7 @@ hours = 1:steps
 
 solar_vals = value.(solar_dispatch)
 wind_vals  = value.(wind_dispatch)
-gas_vals   = value.(gas_output)
+gas_vals   = value.(gas_dispatch)
 batt_vals  = value.(StoreOut) * efficiency_batt .- value.(StoreIn)
 load_vals  = value.(load_increase)
 
@@ -249,7 +242,7 @@ df = DataFrame(
     load = load_increase, 
     solar_dispatch = value.(solar_dispatch),
     wind_dispatch  = value.(wind_dispatch),
-    gas_output     = value.(gas_output),
+    gas_dispatch     = value.(gas_dispatch),
     StoreIn        = value.(StoreIn),
     StoreOut       = value.(StoreOut),
     InStorage      = value.(InStorage)
@@ -259,5 +252,4 @@ CSV.write(joinpath(results_dir, "dispatch_timeseries.csv"), df)
 # Save expressions
 save_var_csv(solar_available, "solar_available")
 save_var_csv(wind_available, "wind_available")
-save_var_csv(curtailment_pos, "curtailment_pos")
 save_var_csv(curtailment, "curtailment")
