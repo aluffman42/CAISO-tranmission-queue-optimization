@@ -1,0 +1,60 @@
+constraint_id,was_incremented,cost,increment_amount
+Midway-Q2005 230kV Line,true,9.4e8,16891
+Miguel 69 kV constraint,false,6.71054e8,431
+Moss Landing-Las Aguilas 230 kV Line,false,0.0,0
+Rio Oso-Brighton 230kV line,true,0.0,574
+Birds Landing-Contra Costa 230kV Line,false,7.0e8,1766
+Antelope-Neenach Constraint,false,1.0e8,2000
+VEA 138kV area constraint,false,3.791300305e8,1367
+Rocklin-Pleaseant grove 115kV line,false,1.25e8,707
+Woodland- Davis 115kV line,false,9.329e6,109
+Windmaster-Delta pumps 230 kV line,false,4.17332e8,6034
+Vaca Dixon-Tesla 500kV Line,false,2.851848e9,8645
+Midway 230/115kV TB #3,false,1.5e8,784
+Semitropic-Midway 115kV Line,false,7.6e8,637
+GLW 230kV area constraint,false,3.563877756e8,1285
+Internal San Diego Area constraint,false,2.595945198e8,936
+Devers-Red Bluff Constraint,false,1.386722862e9,5000
+Control to Inyokern area constraint,false,3.29e8,186
+Kramer to Victor Area Constraint,true,3.344775543e8,1206
+Lakeville-Ignacio 230 kV line,true,0.0,861
+Panoche- Mendota 115 kV line,true,0.0,2019
+Merced 115/70kV TB#2,false,1.25e8,358
+Diablo–Gates 500 kV line,false,8.3e8,4125
+Bell-Placer 115kV Line,false,1.85e8,480
+Dumbarton-Newark 115 kV line,false,2.712429918e8,978
+Eastshore-San Mateo 230 kV line,false,0.0,548
+East of Miguel constraint,false,7.82943728e8,2823
+Grant - Eastshore #2 line 115 kV,false,1.25e8,290
+Encina - San Luis Rey 230 kV constraint,false,2.06899051e8,746
+South of Magunden Constraint,false,4.358e9,2000
+Cortina-Eagle Rock 115 kV line,false,5.0e7,50
+Lugo - Victorville area constraint,false,2.165e9,6800
+Eagle Mountain Constraint,false,1.182e9,600
+Morganhill-Metcalf 115kV Line,false,3.8e8,712
+Los Esteros-Silicon Valley 230 kV,false,9.651591121e7,348
+Kasson Jct-Heinz 115 kV line,false,1.7e9,1255
+Sobrante-Moraga 230 kV line,true,0.0,653
+Del Amo - Barre Area Constraint,false,1.1e7,1058
+Gates-Panoche 230 kV #1 and #2 Lines,false,2.14062e8,8379
+Silvergate - Bay Blvd 230 kV constraint,true,2.9971e7,4754
+Ocean Ranch 69 kV constraint,false,2.83e7,692
+Calcite to Lugo Area Constraint,false,2.39e8,1046
+Carberry-Round Mountain 230kV Line,false,1.8e8,26
+Chicarita 138 kV constraint,false,1.0e8,700
+Windhub Constraint,true,6.12e8,2500
+Salado-Crow Creek Sw Sta 60 kV line,false,4.0e8,74
+Bellota-Weber 230kV line,false,4.0e8,460
+Etiwanda-Rancho Vista Constraint,true,8.9e7,3350
+Tesla-Salado 115 kV line,false,0.0,70
+Tesla-Bellota 230 kV line,true,0.0,300
+Trabuco-Capistrano 138 kV constraint,false,1.03366e8,556
+SCE Metro Area Default Constraint,false,0.0,0
+Lugo Transformer Area Constraint,false,3.267119063e8,1178
+Victor to Lugo Area Constraint,false,3.386377229e8,1221
+Newark-Newark Distribution 115 kV line,true,0.0,831
+Los Banos 500/230kV TB,true,0.0,4931
+Antelope-Vincent Constraint,true,1.32e7,1500
+Hinson - Del Amo Constraint,true,2.8e7,800
+Talega 230 kV constraint,false,2.106e8,2201
+Pardee-Sylmar Constraint,false,6.6e8,1800

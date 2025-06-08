@@ -22,10 +22,20 @@ bus_upgrade = Dict(bus_df.IDX[i] => bus_df.Constraint_original[i] for i in 1:nro
 # Remove duplicate constraints, keeping the first occurrence
 unique_constraints = unique(bus_df, :Constraint_original)
 
-# Create mapping from Constraint_original to (Cost, Inc) using only unique constraints
+# Create mapping from index to to (Constraint, Cost, Inc) using only unique constraints
 constraint_to_cost_inc = Dict(
-    row.Constraint_original => (row.Cost, row.Inc) for row in eachrow(unique_constraints)
+    i => (row.Constraint_original, row.Cost, row.Inc) for (i, row) in pairs(eachrow(unique_constraints))
 )
+
+# Update bus_upgrade: keys are bus IDX, values are the row index in unique_constraints (i.e., the key in constraint_to_cost_inc)
+# NOTE that bus IDX starts at 0
+bus_upgrade = Dict()
+for (row_idx, row) in enumerate(eachrow(bus_df))
+    # Find the row index in unique_constraints with the same Constraint_original
+    constraint_idx = findfirst(x -> x.Constraint_original == row.Constraint_original, eachrow(unique_constraints))
+    bus_upgrade[row.IDX] = constraint_idx
+end
+
 
 # solar queue
 solar_path = "solar.csv"
@@ -68,6 +78,7 @@ efficiency_batt = .95
 inital_soc = 0.5
 final_soc = 0.5
 
+Nconstraints = length(constraint_to_cost_inc)
 Nbuses = length(bus_idx)
 Nsolar = length(solar_buses)
 Nwind = length(wind_buses)
@@ -88,6 +99,8 @@ m = Model(Gurobi.Optimizer)
 @variable(m, StoreOut[1:steps]  >= 0)  
 @variable(m, InStorage[1:steps] >= 0)
 @variable(m, station_additions[1:Nbuses] >= 0)
+@variable(m, station_increment[1:Nbuses] >= 0)
+@variable(m, constraint_incremented[1:Nconstraints], Bin)
 
 # Avalibile capacity at bus constraint
 # For each bus, station_additions equals the sum of capacities of all projects built at that bus
@@ -100,6 +113,14 @@ for (bus_idx_val, bus_id) in enumerate(bus_idx)
             sum(batt_build[i]  * batt_capacity[i]  for i in 1:Nbatt  if batt_buses[i]  == bus_id)
     )
 end
+@constraint(m, [bus=1:Nbuses], station_additions[bus] <= bus_avail[bus-1] + station_increment[bus]) #-1 because index starts at 0
+
+# constraint upgrade cost
+@expression(m, upgrade_costs, sum(constraint_incremented[constraint] * constraint_to_cost_inc[constraint][2] for constraint in 1:Nconstraints))
+
+# constraint linking station increment to constraint increment
+@constraint(m, [constraint=1:Nconstraints], constraint_incremented[constraint] * constraint_to_cost_inc[constraint][3] == 
+                sum(station_increment[bus] for bus in 1:Nbuses if bus_upgrade[bus-1] == constraint)) #-1 because index starts at 0
 
 # Available output (as before)
 @expression(m, solar_available[t=1:steps], sum(solar_build[i] * solar_capacity[i] * solar_cf[t] for i in 1:Nsolar))
@@ -118,7 +139,7 @@ end
 # First week: storage starts from initial_soc
 @constraint(m, InStorage[1] == batt_store_available * inital_soc)
 # Last week: storage starts from final_soc TODO adding this makes the model weird 
-# @constraint(m, InStorage[steps] == batt_store_available * final_soc)
+@constraint(m, InStorage[steps] == batt_store_available * final_soc)
 
 # Storage bounds for all t
 for t = 1:steps
@@ -139,8 +160,8 @@ end
 @constraint(m, [t=1:steps], gas_dispatch[t]  <= gas_available[t])
 
 
-# Power balance: supply >= demand
-@constraint(m, [t=1:steps], load_increase[t] <= solar_dispatch[t] + wind_dispatch[t] + gas_dispatch[t] - StoreIn[t] + (StoreOut[t]) * efficiency_batt)
+# Power balance: supply == demand (allow for curtailemt)
+@constraint(m, [t=1:steps], load_increase[t] == solar_dispatch[t] + wind_dispatch[t] + gas_dispatch[t] - StoreIn[t] + (StoreOut[t]) * efficiency_batt)
 
 # For each time step, batteries can only charge from excess generation
 @constraint(m, [t=1:steps], StoreIn[t] <= solar_dispatch[t] + wind_dispatch[t] + gas_dispatch[t] - load_increase[t] + StoreOut[t] * efficiency_batt)
@@ -151,7 +172,7 @@ end
 @expression(m, total_curtailment_cost, sum(curtailment[t] * curtail_cost for t in 1:steps))
 
 # Emissions
-@expression(m, emissions,   sum(gas_dispatch[t] * gas_emissions for t in 1:steps))
+@expression(m, emissions, sum(gas_dispatch[t] * gas_emissions for t in 1:steps))
 
 # Objective: total cost = project costs + curtailment + emissions
 @objective(m, Min,
@@ -160,7 +181,8 @@ end
     sum(gas_build[i]   * gas_proj_cost[i]   for i in 1:Ngas)   +
     sum(batt_build[i] * batt_proj_cost[i] for i in 1:Nbatt) +
     total_curtailment_cost +
-    emissions_cost * emissions
+    emissions_cost * emissions + 
+    upgrade_costs
 )
 
 optimize!(m)
@@ -202,6 +224,7 @@ println("Max modeled load (MW): ", max_load_val)
 
 println("Total Emissions (tons CO₂): ", value(emissions))
 println("Total Curtailment (MWh): ", sum(value.(curtailment)))
+println("Total Upgrade Costs (\$): ", value(upgrade_costs))
 
 total_load = sum(value.(load_increase))
 total_generation = sum(value.(solar_dispatch)) + sum(value.(wind_dispatch)) + sum(value.(gas_dispatch)) + sum(value.(StoreOut)) * efficiency_batt - sum(value.(StoreIn))
@@ -230,7 +253,6 @@ p = plot(
     stacked=true
 )
 plot!(p, hours, load_vals, label="Load", lw=2, lc=:black, linestyle=:dash)
-display(p)
 
 results_dir = "results"
 isdir(results_dir) || mkdir(results_dir)
@@ -269,6 +291,7 @@ save_var_csv(curtailment, "curtailment")
 
 
 # Add capacity additions and built projects to bus_df
+bus_df.station_increment = [value(station_increment[i]) for i in 1:Nbuses]
 capacity_additions = [value(station_additions[i]) for i in 1:Nbuses]
 projects_built = [String[] for _ in 1:Nbuses]
 
@@ -303,3 +326,12 @@ bus_df.capacity_additions = capacity_additions
 bus_df.projects_built = [join(p, "; ") for p in projects_built]
 
 CSV.write(joinpath(results_dir, "bus_results.csv"), bus_df)
+
+# Save constraint upgrade results to CSV
+constraint_results = DataFrame(
+    constraint_id = [constraint_to_cost_inc[i][1] for i in 1:Nconstraints],
+    was_incremented = [value(constraint_incremented[i]) > 0.5 for i in 1:Nconstraints],
+    cost = [constraint_to_cost_inc[i][2] for i in 1:Nconstraints],
+    increment_amount = [constraint_to_cost_inc[i][3] for i in 1:Nconstraints]
+)
+CSV.write(joinpath(results_dir, "constraint_results.csv"), constraint_results)
