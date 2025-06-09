@@ -1,4 +1,4 @@
-using CSV, JuMP, Gurobi, DataFrames, Plots, FileIO
+using CSV, JuMP, Gurobi, DataFrames, Plots, FileIO, Measures
 ### Import the data
 
 ## solar and wind capacity factor
@@ -158,7 +158,6 @@ depth_trigger = 0.1 * batt_store_available
 @constraint(m, [t=2:steps],  s[t] ≥ -Δ[t] - depth_trigger)
 @expression(m, wear, sum(s[t] for t=2:steps))        # total MWh of “over-depth”
 
-
 # Storage bounds for all t
 for t = 1:steps
     @constraint(m, InStorage[t] <= batt_store_available)
@@ -289,6 +288,9 @@ println("Total Gas Generation (MWh): ", sum(value.(gas_dispatch)))
 println("Total Battery Charge (MWh): ", sum(value.(StoreIn)))
 println("Total Battery Discharge (MWh): ", sum(value.(StoreOut)))
 
+results_dir = "results"
+isdir(results_dir) || mkdir(results_dir)
+
 hours = 1:steps
 
 solar_vals = value.(solar_dispatch)
@@ -306,7 +308,6 @@ p = plot(
     #label=["Solar Dispatch" "Wind Dispatch" "Gas Dispatch" "Battery Dispatch"],
     xlabel="Hour", ylabel="Power (MW)",
     title="Stacked Resource Dispatch (First Week)",
-    #legend=:topright,'
     legend=false,
     lw=1.5,
     fillalpha=0.7,
@@ -314,14 +315,95 @@ p = plot(
     stacked=true
 )
 plot!(p, week_hours, load_vals[week_hours], label="Load", lw=2, lc=:black, linestyle=:dash)
-
-results_dir = "results"
-isdir(results_dir) || mkdir(results_dir)
-
 savefig(p, joinpath(results_dir, "dispatch_plot.png"))
 
+jan_week  = 169:336
+apr_week  = 2329:2496
+jul_week  = 4153:4320
+oct_week  = 6529:6696
+
+labels = ["Solar Dispatch" "Wind Dispatch" "Gas Dispatch" "Battery Dispatch"]
+
+p1 = plot(
+        jan_week, 
+        [solar_vals[jan_week] wind_vals[jan_week] gas_vals[jan_week] batt_vals[jan_week]], 
+        xlabel="Hour", ylabel="Power (MW)",
+        label = labels,
+        legend=:outertop,
+        legend_column = -1,
+        lw=1.5,
+        fillalpha=0.7,
+        c=[:orange :blue :gray :purple],
+        stacked=true,
+        title="Week of Jan 8")
+plot!(p1, jan_week, load_vals[jan_week], label="Load", lw=2, lc=:black, linestyle=:dash)
+
+p2 = plot(
+        apr_week, 
+        [solar_vals[apr_week] wind_vals[apr_week] gas_vals[apr_week] batt_vals[apr_week]], 
+        xlabel="Hour", ylabel="Power (MW)",
+        legend=false,
+        lw=1.5,
+        fillalpha=0.7,
+        c=[:orange :blue :gray :purple],
+        stacked=true,
+        title="Week of Apr 8")
+plot!(p2, apr_week, load_vals[apr_week], label="Load", lw=2, lc=:black, linestyle=:dash)
+
+p3 = plot(
+        jul_week, 
+        [solar_vals[jul_week] wind_vals[jul_week] gas_vals[jul_week] batt_vals[jul_week]], 
+        xlabel="Hour", ylabel="Power (MW)",
+        legend=false,
+        lw=1.5,
+        fillalpha=0.7,
+        c=[:orange :blue :gray :purple],
+        stacked=true,
+        title="Week of Jul 8")
+plot!(p3, jul_week, load_vals[jul_week], label="Load", lw=2, lc=:black, linestyle=:dash)
+
+p4 = plot(
+        oct_week, 
+        [solar_vals[oct_week] wind_vals[oct_week] gas_vals[oct_week] batt_vals[oct_week]], 
+        label=labels, 
+        xlabel="Hour", ylabel="Power (MW)",
+        legend=false,
+        lw=1.5,
+        fillalpha=0.7,
+        c=[:orange :blue :gray :purple],
+        stacked=true,
+        title="Week of Oct 14")
+plot!(p4, oct_week, load_vals[oct_week], label="Load", lw=2, lc=:black, linestyle=:dash)
+# Save each weekly plot to PNG with month names
+savefig(p1, joinpath(results_dir, "dispatch_january.png"))
+savefig(p2, joinpath(results_dir, "dispatch_april.png"))
+savefig(p3, joinpath(results_dir, "dispatch_july.png"))
+savefig(p4, joinpath(results_dir, "dispatch_october.png"))
+
+# Dummy plot to hold the common legend
+# legend_plot = plot(
+#                 jan_week, 
+#                 [solar_vals[jan_week] wind_vals[jan_week] gas_vals[jan_week] batt_vals[jan_week]]; label=labels, 
+#                 legend=:top, 
+#                 grid=false, 
+#                 framestyle=:none, 
+#                 c=[:orange :blue :gray :purple],
+#                 ticks=nothing, 
+#                 linealpha=0,
+#                 xlabel="")
+# plot!(legend_plot, jan_week, load_vals[oct_week], label="Load", lw=2, lc=:black, linestyle=:dash, linealpha=0)
+
+# Combine all plots in one layout
+final_plot = plot(p1, p2, p3, p4; 
+                layout = @layout([a; b; c; d]),  # d gets more height
+                size=(800, 1200), 
+                top_margin = 5mm,
+                left_margin = 10mm,
+                right_margin = 15mm)
+savefig(final_plot, joinpath(results_dir, "four_seasons_dispatch.png"))
+
 # Plot battery state of charge (InStorage) for the first two weeks (24*7*2 = 336 hours)
-soc_hours = 1:(24*7*2)
+soc_hours = 1:(24*7)
 soc_vals = value.(InStorage)[soc_hours]
 
 p_soc = plot(
